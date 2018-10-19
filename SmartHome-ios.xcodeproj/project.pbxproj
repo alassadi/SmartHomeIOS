@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		CBB9F9CB2179EA830009AC69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9CA2179EA830009AC69 /* AppDelegate.swift */; };
-		CBB9F9CD2179EA830009AC69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9CC2179EA830009AC69 /* ViewController.swift */; };
-		CBB9F9D02179EA830009AC69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB9F9CE2179EA830009AC69 /* Main.storyboard */; };
 		CBB9F9D32179EA830009AC69 /* SmartHome_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9D12179EA830009AC69 /* SmartHome_ios.xcdatamodeld */; };
 		CBB9F9D52179EA840009AC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB9F9D42179EA840009AC69 /* Assets.xcassets */; };
 		CBB9F9D82179EA840009AC69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB9F9D62179EA840009AC69 /* LaunchScreen.storyboard */; };
 		CBB9F9E32179EA840009AC69 /* SmartHome_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9E22179EA840009AC69 /* SmartHome_iosTests.swift */; };
 		CBB9F9EE2179EA840009AC69 /* SmartHome_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9ED2179EA840009AC69 /* SmartHome_iosUITests.swift */; };
+		CBB9F9FC2179EBB70009AC69 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9FB2179EBB70009AC69 /* HomeVC.swift */; };
+		CBB9F9FE2179ECC40009AC69 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9FD2179ECC40009AC69 /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +37,6 @@
 /* Begin PBXFileReference section */
 		CBB9F9C72179EA830009AC69 /* SmartHome-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmartHome-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB9F9CA2179EA830009AC69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CBB9F9CC2179EA830009AC69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CBB9F9CF2179EA830009AC69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBB9F9D22179EA830009AC69 /* SmartHome_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmartHome_ios.xcdatamodel; sourceTree = "<group>"; };
 		CBB9F9D42179EA840009AC69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBB9F9D72179EA840009AC69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +47,8 @@
 		CBB9F9E92179EA840009AC69 /* SmartHome-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SmartHome-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB9F9ED2179EA840009AC69 /* SmartHome_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHome_iosUITests.swift; sourceTree = "<group>"; };
 		CBB9F9EF2179EA840009AC69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBB9F9FB2179EBB70009AC69 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		CBB9F9FD2179ECC40009AC69 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +99,9 @@
 		CBB9F9C92179EA830009AC69 /* SmartHome-ios */ = {
 			isa = PBXGroup;
 			children = (
+				CBB9F9FB2179EBB70009AC69 /* HomeVC.swift */,
+				CBB9F9FD2179ECC40009AC69 /* LoginVC.swift */,
 				CBB9F9CA2179EA830009AC69 /* AppDelegate.swift */,
-				CBB9F9CC2179EA830009AC69 /* ViewController.swift */,
-				CBB9F9CE2179EA830009AC69 /* Main.storyboard */,
 				CBB9F9D42179EA840009AC69 /* Assets.xcassets */,
 				CBB9F9D62179EA840009AC69 /* LaunchScreen.storyboard */,
 				CBB9F9D92179EA840009AC69 /* Info.plist */,
@@ -234,7 +234,6 @@
 			files = (
 				CBB9F9D82179EA840009AC69 /* LaunchScreen.storyboard in Resources */,
 				CBB9F9D52179EA840009AC69 /* Assets.xcassets in Resources */,
-				CBB9F9D02179EA830009AC69 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +258,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBB9F9CD2179EA830009AC69 /* ViewController.swift in Sources */,
+				CBB9F9FC2179EBB70009AC69 /* HomeVC.swift in Sources */,
 				CBB9F9D32179EA830009AC69 /* SmartHome_ios.xcdatamodeld in Sources */,
+				CBB9F9FE2179ECC40009AC69 /* LoginVC.swift in Sources */,
 				CBB9F9CB2179EA830009AC69 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,14 +297,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CBB9F9CE2179EA830009AC69 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CBB9F9CF2179EA830009AC69 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CBB9F9D62179EA840009AC69 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
