@@ -13,6 +13,7 @@
 		CB2F02CB217C8A0800461519 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB2F02CA217C8A0800461519 /* GoogleService-Info.plist */; };
 		CB2F02CC217C8A0800461519 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB2F02CA217C8A0800461519 /* GoogleService-Info.plist */; };
 		CB2F02CD217C8A0800461519 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB2F02CA217C8A0800461519 /* GoogleService-Info.plist */; };
+		CB7FCE63217E2CB1001042A0 /* RoundedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FCE62217E2CB1001042A0 /* RoundedButtonView.swift */; };
 		CBB9F9CB2179EA830009AC69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9CA2179EA830009AC69 /* AppDelegate.swift */; };
 		CBB9F9D32179EA830009AC69 /* SmartHome_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9D12179EA830009AC69 /* SmartHome_ios.xcdatamodeld */; };
 		CBB9F9D52179EA840009AC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB9F9D42179EA840009AC69 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		CBB9F9EE2179EA840009AC69 /* SmartHome_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9ED2179EA840009AC69 /* SmartHome_iosUITests.swift */; };
 		CBB9F9FC2179EBB70009AC69 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9FB2179EBB70009AC69 /* HomeVC.swift */; };
 		CBB9F9FE2179ECC40009AC69 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9FD2179ECC40009AC69 /* LoginVC.swift */; };
+		CBD43303217E81BC00CE9C44 /* EmailPasswordStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD43302217E81BC00CE9C44 /* EmailPasswordStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,7 @@
 		B6138E6881B56ECAA82E3E1A /* Pods-SmartHome-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHome-iosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartHome-iosUITests/Pods-SmartHome-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BAC54E85D922C2C64F21BCA6 /* Pods-SmartHome-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHome-iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartHome-iosUITests/Pods-SmartHome-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB2F02CA217C8A0800461519 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CB7FCE62217E2CB1001042A0 /* RoundedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonView.swift; sourceTree = "<group>"; };
 		CBB9F9C72179EA830009AC69 /* SmartHome-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmartHome-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB9F9CA2179EA830009AC69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBB9F9D22179EA830009AC69 /* SmartHome_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmartHome_ios.xcdatamodel; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 		CBB9F9EF2179EA840009AC69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBB9F9FB2179EBB70009AC69 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		CBB9F9FD2179ECC40009AC69 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		CBD43302217E81BC00CE9C44 /* EmailPasswordStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPasswordStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CB7FCE61217E2C90001042A0 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				CB7FCE62217E2CB1001042A0 /* RoundedButtonView.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
 		CBB9F9BE2179EA830009AC69 = {
 			isa = PBXGroup;
 			children = (
@@ -143,8 +155,9 @@
 		CBB9F9C92179EA830009AC69 /* SmartHome-ios */ = {
 			isa = PBXGroup;
 			children = (
+				CBD43300217E816100CE9C44 /* Sign */,
+				CB7FCE61217E2C90001042A0 /* UIComponents */,
 				CBB9F9FB2179EBB70009AC69 /* HomeVC.swift */,
-				CBB9F9FD2179ECC40009AC69 /* LoginVC.swift */,
 				CBB9F9CA2179EA830009AC69 /* AppDelegate.swift */,
 				CBB9F9D42179EA840009AC69 /* Assets.xcassets */,
 				CBB9F9D62179EA840009AC69 /* LaunchScreen.storyboard */,
@@ -171,6 +184,23 @@
 				CBB9F9EF2179EA840009AC69 /* Info.plist */,
 			);
 			path = "SmartHome-iosUITests";
+			sourceTree = "<group>";
+		};
+		CBD43300217E816100CE9C44 /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				CBD43301217E819700CE9C44 /* SignIn */,
+			);
+			path = Sign;
+			sourceTree = "<group>";
+		};
+		CBD43301217E819700CE9C44 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				CBB9F9FD2179ECC40009AC69 /* LoginVC.swift */,
+				CBD43302217E81BC00CE9C44 /* EmailPasswordStack.swift */,
+			);
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,9 +417,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBD43303217E81BC00CE9C44 /* EmailPasswordStack.swift in Sources */,
 				CBB9F9FC2179EBB70009AC69 /* HomeVC.swift in Sources */,
 				CBB9F9D32179EA830009AC69 /* SmartHome_ios.xcdatamodeld in Sources */,
 				CBB9F9FE2179ECC40009AC69 /* LoginVC.swift in Sources */,
+				CB7FCE63217E2CB1001042A0 /* RoundedButtonView.swift in Sources */,
 				CBB9F9CB2179EA830009AC69 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
