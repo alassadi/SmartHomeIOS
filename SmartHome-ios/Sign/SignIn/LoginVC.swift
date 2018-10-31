@@ -19,9 +19,8 @@ class LoginVC: UIViewController {
     
     private func initUI() {
         DispatchQueue.main.async {
+            self.activateHideKeyboardOnTap()
             self.view.addSubview(self.stackHeader)
-            self.stackHeader.addArrangedSubview(self.labelReplaceWithLogo)
-            self.stackHeader.addArrangedSubview(self.labelLoginToContinue)
             self.view.addSubview(self.stackEmailPassword)
             self.view.addSubview(self.buttonCreateAccount)
             self.view.addSubview(self.labelDontHaveAccount)
@@ -43,54 +42,37 @@ class LoginVC: UIViewController {
     
     private func initTargets() {
         DispatchQueue.main.async {
-            self.buttonCreateAccount.addTarget(self, action: #selector(self.onCreateAccountClicked), for: .touchUpInside)
+            self.buttonCreateAccount.addTarget(self, action: #selector(self.onCreateAccountPressed), for: .touchUpInside)
+            self.stackEmailPassword.buttonLogin.button.addTarget(self, action: #selector(self.onLoginPressed), for: .touchUpInside)
         }
     }
     
-    @objc private func onCreateAccountClicked() {
+    @objc private func onCreateAccountPressed() {
         print("Create account pressed.")
     }
-    
-    let stackHeader: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.distribution = .equalSpacing
-        stackView.spacing = 10
-        stackView.axis = .vertical
-        stackView.alignment = .center
-        return stackView
-    }()
-    
-    let labelReplaceWithLogo: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "SmartHome App"
-        label.font = UIFont.systemFont(ofSize: 40)
-        return label
-    }()
-    
-    let labelLoginToContinue: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Please log in to continue"
-        label.font = UIFont.systemFont(ofSize: 14)
-        label.textColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.3)
-        return label
-    }()
-    
+
+    @objc private func onLoginPressed() {
+        print("Login clicked.")
+
+        let testVC = TestVC()
+        self.present(testVC, animated: true, completion: nil)
+    }
+
+    //Components
+    let stackHeader = HeaderStack()
     let stackEmailPassword = EmailPasswordStack()
     
     let labelDontHaveAccount: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Don't have an account?"
+        label.text = "Don't have an account?" //Localize
         return label
     }()
     
     let buttonCreateAccount: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Create new account", for: .normal)
+        button.setTitle("Create new account", for: .normal) //Localize
         button.setTitleColor(.red, for: .normal)
         button.isEnabled = true
         return button

@@ -13,15 +13,15 @@ class RoundedButtonView: UIView {
     let button: UIButton = {
         let bttn = UIButton(type: .system)
         bttn.translatesAutoresizingMaskIntoConstraints = false
-        bttn.setTitle("Log in", for: .normal)
         bttn.setTitleColor(.white, for: .normal)
         return bttn
     }()
     
-    init(backgroundColor: UIColor) {
+    init(title: String, backgroundColor: UIColor) {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
         self.backgroundColor = backgroundColor
+        self.button.setTitle(title, for: .normal)
         self.clipsToBounds = true
         self.heightAnchor.constraint(equalToConstant: 50).isActive = true
         self.layer.cornerRadius = 25

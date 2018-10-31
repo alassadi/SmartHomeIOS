@@ -28,11 +28,12 @@ class EmailPasswordStack: UIStackView {
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
+    //Components
     let textFieldUsername: UITextField = {
         let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
-        field.placeholder = "Username or Email"
+        field.placeholder = "Username or Email" //Localize
         field.keyboardType = .emailAddress
         return field
     }()
@@ -49,7 +50,7 @@ class EmailPasswordStack: UIStackView {
     let textFieldPassword: UITextField = {
         let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
-        field.placeholder = "Password"
+        field.placeholder = "Password" //Localize
         return field
     }()
     
@@ -62,5 +63,5 @@ class EmailPasswordStack: UIStackView {
         return view
     }()
     
-    let buttonLogin = RoundedButtonView(backgroundColor: .red)
+    let buttonLogin = RoundedButtonView(title: "Log in", backgroundColor: .red) //Localize
 }
