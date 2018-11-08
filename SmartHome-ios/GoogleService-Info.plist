@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>227730898463-34kab24lnjv8tvo0r65qmaugsab25htg.apps.googleusercontent.com</string>
+	<string>227730898463-12jhn6fbml6pq1vailvrhk0u2c5d9nop.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.227730898463-34kab24lnjv8tvo0r65qmaugsab25htg</string>
+	<string>com.googleusercontent.apps.227730898463-12jhn6fbml6pq1vailvrhk0u2c5d9nop</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCSavcDWNwEnksM_IomqB5ApV83D_c9DX8</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,23 +17,23 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.tunasson.SmartHome-ios</string>
+	<string>com.charlie.SmartHome-ios-test</string>
 	<key>PROJECT_ID</key>
 	<string>smarthome-3c6b9</string>
 	<key>STORAGE_BUCKET</key>
 	<string>smarthome-3c6b9.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:227730898463:ios:eca0954051270586</string>
+	<string>1:227730898463:ios:584424106c362509</string>
 	<key>DATABASE_URL</key>
 	<string>https://smarthome-3c6b9.firebaseio.com</string>
 </dict>
