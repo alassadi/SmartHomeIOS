@@ -22,6 +22,7 @@
 		CB9C5655218A287900E107BA /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9C5654218A287900E107BA /* Models.swift */; };
 		CBA6EEEF21946C8A00FF963E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBA6EEEE21946C8A00FF963E /* GoogleService-Info.plist */; };
 		CBA6EEF22194A3DA00FF963E /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA6EEF12194A3DA00FF963E /* SignUpVC.swift */; };
+		CBA6EEF42194AFB000FF963E /* IconAndLinedTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA6EEF32194AFB000FF963E /* IconAndLinedTextFieldView.swift */; };
 		CBB9F9CB2179EA830009AC69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9CA2179EA830009AC69 /* AppDelegate.swift */; };
 		CBB9F9D32179EA830009AC69 /* SmartHome_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9D12179EA830009AC69 /* SmartHome_ios.xcdatamodeld */; };
 		CBB9F9D52179EA840009AC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB9F9D42179EA840009AC69 /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 		CBA6EEED21946B3700FF963E /* SmartHome-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SmartHome-ios.entitlements"; sourceTree = "<group>"; };
 		CBA6EEEE21946C8A00FF963E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CBA6EEF12194A3DA00FF963E /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		CBA6EEF32194AFB000FF963E /* IconAndLinedTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconAndLinedTextFieldView.swift; sourceTree = "<group>"; };
 		CBB9F9C72179EA830009AC69 /* SmartHome-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmartHome-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB9F9CA2179EA830009AC69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBB9F9D22179EA830009AC69 /* SmartHome_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmartHome_ios.xcdatamodel; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				CB7FCE62217E2CB1001042A0 /* RoundedButtonView.swift */,
+				CBA6EEF32194AFB000FF963E /* IconAndLinedTextFieldView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBA6EEF42194AFB000FF963E /* IconAndLinedTextFieldView.swift in Sources */,
 				CB9C5653218A272900E107BA /* Dispatcher.swift in Sources */,
 				CB9C564F218A26D200E107BA /* SmartHomeAPI.swift in Sources */,
 				CB9C564D218A269700E107BA /* Utility.swift in Sources */,

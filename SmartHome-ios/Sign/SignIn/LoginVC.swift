@@ -11,7 +11,8 @@ import UIKit
 class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.translatesAutoresizingMaskIntoConstraints = false
+
+        self.view.backgroundColor = .white
         
         initUI()
         initTargets()
@@ -49,13 +50,13 @@ class LoginVC: UIViewController {
     
     @objc private func onCreateAccountPressed() {
         print("Create account pressed.")
+        DispatchQueue.main.async {
+            self.present(SignUpVC(), animated: true)
+        }
     }
 
     @objc private func onLoginPressed() {
         print("Login clicked.")
-
-        let testVC = TestVC()
-        self.present(testVC, animated: true, completion: nil)
     }
 
     //Components
