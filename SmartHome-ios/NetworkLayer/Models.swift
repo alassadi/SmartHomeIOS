@@ -15,3 +15,17 @@ struct friend: Codable {
     var description: String?
     var __v: Int?
 }
+
+struct _user: Codable {
+    let id: Int32?
+    let email: String?
+    var first_name: String?
+    var last_name: String?
+    var phone: String?
+    var address: String?
+    var postal_code: String?
+    var city: String?
+    var country: String?
+    var date_of_birth: String?
+    var gender: String?
+}

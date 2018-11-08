@@ -10,9 +10,12 @@
 		0F0F559A733ADAA07E025DB3 /* Pods_SmartHome_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A14F5B95ECF5F7A2278464F2 /* Pods_SmartHome_iosUITests.framework */; };
 		26726F8B5F84A344EE20D682 /* Pods_SmartHome_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E86BE15E847DCE890EDDCBA /* Pods_SmartHome_ios.framework */; };
 		A1FA6DCEAAB3E86737459555 /* Pods_SmartHome_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0519320208578FF660DEF5FD /* Pods_SmartHome_iosTests.framework */; };
+		CB46B9252196037B00B38E82 /* UIGroup+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB46B9242196037B00B38E82 /* UIGroup+Components.swift */; };
+		CB46B92721962CBE00B38E82 /* SignUp2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB46B92621962CBE00B38E82 /* SignUp2VC.swift */; };
 		CB7C7FC9218A5D4600C64E95 /* UIGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7C7FC8218A5D4600C64E95 /* UIGroup.swift */; };
 		CB7FCE63217E2CB1001042A0 /* RoundedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FCE62217E2CB1001042A0 /* RoundedButtonView.swift */; };
-		CB9C5644218A21BA00E107BA /* HeaderStack+LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9C5643218A21BA00E107BA /* HeaderStack+LoginVC.swift */; };
+		CB811ABB21971E27009BFC3A /* SignUpVC+FormScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB811ABA21971E27009BFC3A /* SignUpVC+FormScroll.swift */; };
+		CB9C5644218A21BA00E107BA /* LoginVC+HeaderStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9C5643218A21BA00E107BA /* LoginVC+HeaderStack.swift */; };
 		CB9C5647218A248100E107BA /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9C5646218A248100E107BA /* TestVC.swift */; };
 		CB9C564A218A251800E107BA /* NetworkEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9C5649218A251800E107BA /* NetworkEnums.swift */; };
 		CB9C564D218A269700E107BA /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9C564C218A269700E107BA /* Utility.swift */; };
@@ -22,6 +25,7 @@
 		CB9C5655218A287900E107BA /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9C5654218A287900E107BA /* Models.swift */; };
 		CBA6EEEF21946C8A00FF963E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBA6EEEE21946C8A00FF963E /* GoogleService-Info.plist */; };
 		CBA6EEF22194A3DA00FF963E /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA6EEF12194A3DA00FF963E /* SignUpVC.swift */; };
+		CBA6EEF42194AFB000FF963E /* FormTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA6EEF32194AFB000FF963E /* FormTextFieldView.swift */; };
 		CBB9F9CB2179EA830009AC69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9CA2179EA830009AC69 /* AppDelegate.swift */; };
 		CBB9F9D32179EA830009AC69 /* SmartHome_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9D12179EA830009AC69 /* SmartHome_ios.xcdatamodeld */; };
 		CBB9F9D52179EA840009AC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB9F9D42179EA840009AC69 /* Assets.xcassets */; };
@@ -30,7 +34,7 @@
 		CBB9F9EE2179EA840009AC69 /* SmartHome_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9ED2179EA840009AC69 /* SmartHome_iosUITests.swift */; };
 		CBB9F9FC2179EBB70009AC69 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9FB2179EBB70009AC69 /* HomeVC.swift */; };
 		CBB9F9FE2179ECC40009AC69 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9FD2179ECC40009AC69 /* LoginVC.swift */; };
-		CBD43303217E81BC00CE9C44 /* EmailPasswordStack+LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD43302217E81BC00CE9C44 /* EmailPasswordStack+LoginVC.swift */; };
+		CBD43303217E81BC00CE9C44 /* LoginVC+EmailPasswordStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD43302217E81BC00CE9C44 /* LoginVC+EmailPasswordStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,9 +64,12 @@
 		A14F5B95ECF5F7A2278464F2 /* Pods_SmartHome_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartHome_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6138E6881B56ECAA82E3E1A /* Pods-SmartHome-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHome-iosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartHome-iosUITests/Pods-SmartHome-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BAC54E85D922C2C64F21BCA6 /* Pods-SmartHome-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHome-iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartHome-iosUITests/Pods-SmartHome-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CB46B9242196037B00B38E82 /* UIGroup+Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIGroup+Components.swift"; sourceTree = "<group>"; };
+		CB46B92621962CBE00B38E82 /* SignUp2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp2VC.swift; sourceTree = "<group>"; };
 		CB7C7FC8218A5D4600C64E95 /* UIGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGroup.swift; sourceTree = "<group>"; };
 		CB7FCE62217E2CB1001042A0 /* RoundedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonView.swift; sourceTree = "<group>"; };
-		CB9C5643218A21BA00E107BA /* HeaderStack+LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeaderStack+LoginVC.swift"; sourceTree = "<group>"; };
+		CB811ABA21971E27009BFC3A /* SignUpVC+FormScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpVC+FormScroll.swift"; sourceTree = "<group>"; };
+		CB9C5643218A21BA00E107BA /* LoginVC+HeaderStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+HeaderStack.swift"; sourceTree = "<group>"; };
 		CB9C5646218A248100E107BA /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		CB9C5649218A251800E107BA /* NetworkEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnums.swift; sourceTree = "<group>"; };
 		CB9C564C218A269700E107BA /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
@@ -73,6 +80,7 @@
 		CBA6EEED21946B3700FF963E /* SmartHome-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SmartHome-ios.entitlements"; sourceTree = "<group>"; };
 		CBA6EEEE21946C8A00FF963E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CBA6EEF12194A3DA00FF963E /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		CBA6EEF32194AFB000FF963E /* FormTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextFieldView.swift; sourceTree = "<group>"; };
 		CBB9F9C72179EA830009AC69 /* SmartHome-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmartHome-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB9F9CA2179EA830009AC69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBB9F9D22179EA830009AC69 /* SmartHome_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmartHome_ios.xcdatamodel; sourceTree = "<group>"; };
@@ -87,7 +95,7 @@
 		CBB9F9EF2179EA840009AC69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBB9F9FB2179EBB70009AC69 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		CBB9F9FD2179ECC40009AC69 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		CBD43302217E81BC00CE9C44 /* EmailPasswordStack+LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmailPasswordStack+LoginVC.swift"; sourceTree = "<group>"; };
+		CBD43302217E81BC00CE9C44 /* LoginVC+EmailPasswordStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+EmailPasswordStack.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,8 +153,18 @@
 			isa = PBXGroup;
 			children = (
 				CB7FCE62217E2CB1001042A0 /* RoundedButtonView.swift */,
+				CBA6EEF32194AFB000FF963E /* FormTextFieldView.swift */,
 			);
 			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		CB811ABC21971E30009BFC3A /* Step1 */ = {
+			isa = PBXGroup;
+			children = (
+				CBA6EEF12194A3DA00FF963E /* SignUpVC.swift */,
+				CB811ABA21971E27009BFC3A /* SignUpVC+FormScroll.swift */,
+			);
+			path = Step1;
 			sourceTree = "<group>";
 		};
 		CB9C5645218A245C00E107BA /* TestForLab3 */ = {
@@ -174,6 +192,7 @@
 			children = (
 				CB9C564C218A269700E107BA /* Utility.swift */,
 				CB7C7FC8218A5D4600C64E95 /* UIGroup.swift */,
+				CB46B9242196037B00B38E82 /* UIGroup+Components.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -181,7 +200,8 @@
 		CBA6EEF02194A3B100FF963E /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				CBA6EEF12194A3DA00FF963E /* SignUpVC.swift */,
+				CB811ABC21971E30009BFC3A /* Step1 */,
+				CB46B92621962CBE00B38E82 /* SignUp2VC.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -259,8 +279,8 @@
 			isa = PBXGroup;
 			children = (
 				CBB9F9FD2179ECC40009AC69 /* LoginVC.swift */,
-				CBD43302217E81BC00CE9C44 /* EmailPasswordStack+LoginVC.swift */,
-				CB9C5643218A21BA00E107BA /* HeaderStack+LoginVC.swift */,
+				CBD43302217E81BC00CE9C44 /* LoginVC+EmailPasswordStack.swift */,
+				CB9C5643218A21BA00E107BA /* LoginVC+HeaderStack.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -484,19 +504,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBA6EEF42194AFB000FF963E /* FormTextFieldView.swift in Sources */,
+				CB46B92721962CBE00B38E82 /* SignUp2VC.swift in Sources */,
 				CB9C5653218A272900E107BA /* Dispatcher.swift in Sources */,
 				CB9C564F218A26D200E107BA /* SmartHomeAPI.swift in Sources */,
 				CB9C564D218A269700E107BA /* Utility.swift in Sources */,
 				CB9C5647218A248100E107BA /* TestVC.swift in Sources */,
 				CB7C7FC9218A5D4600C64E95 /* UIGroup.swift in Sources */,
 				CB9C5651218A26FD00E107BA /* RequestData.swift in Sources */,
-				CBD43303217E81BC00CE9C44 /* EmailPasswordStack+LoginVC.swift in Sources */,
+				CBD43303217E81BC00CE9C44 /* LoginVC+EmailPasswordStack.swift in Sources */,
 				CBB9F9FC2179EBB70009AC69 /* HomeVC.swift in Sources */,
 				CBA6EEF22194A3DA00FF963E /* SignUpVC.swift in Sources */,
 				CBB9F9D32179EA830009AC69 /* SmartHome_ios.xcdatamodeld in Sources */,
+				CB46B9252196037B00B38E82 /* UIGroup+Components.swift in Sources */,
+				CB811ABB21971E27009BFC3A /* SignUpVC+FormScroll.swift in Sources */,
 				CBB9F9FE2179ECC40009AC69 /* LoginVC.swift in Sources */,
 				CB9C564A218A251800E107BA /* NetworkEnums.swift in Sources */,
-				CB9C5644218A21BA00E107BA /* HeaderStack+LoginVC.swift in Sources */,
+				CB9C5644218A21BA00E107BA /* LoginVC+HeaderStack.swift in Sources */,
 				CB7FCE63217E2CB1001042A0 /* RoundedButtonView.swift in Sources */,
 				CBB9F9CB2179EA830009AC69 /* AppDelegate.swift in Sources */,
 				CB9C5655218A287900E107BA /* Models.swift in Sources */,

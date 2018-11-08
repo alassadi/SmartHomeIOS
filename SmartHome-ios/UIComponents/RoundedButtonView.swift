@@ -34,7 +34,7 @@ class RoundedButtonView: UIView {
     }
     
     fileprivate func setConstraints() {
-        self.addSubview(button)
+        self.addSubview(self.button)
         NSLayoutConstraint.activate([
             self.button.topAnchor.constraint(equalTo: self.topAnchor),
             self.button.leadingAnchor.constraint(equalTo: self.leadingAnchor),

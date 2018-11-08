@@ -20,7 +20,7 @@ class TestVC: UIViewController {
 
     private func initUI() {
         DispatchQueue.main.async {
-            self.activateHideKeyboardOnTap()
+            self.setHideKeyboardOnTap()
             self.view.addSubview(self.idField)
             self.view.addSubview(self.fieldStack)
             self.view.addSubview(self.getId)

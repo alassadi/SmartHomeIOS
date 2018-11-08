@@ -11,7 +11,8 @@ import UIKit
 class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.translatesAutoresizingMaskIntoConstraints = false
+        self.view.backgroundColor = .white
+        self.setHideKeyboardOnTap()
         
         initUI()
         initTargets()
@@ -19,7 +20,6 @@ class LoginVC: UIViewController {
     
     private func initUI() {
         DispatchQueue.main.async {
-            self.activateHideKeyboardOnTap()
             self.view.addSubview(self.stackHeader)
             self.view.addSubview(self.stackEmailPassword)
             self.view.addSubview(self.buttonCreateAccount)
@@ -49,17 +49,21 @@ class LoginVC: UIViewController {
     
     @objc private func onCreateAccountPressed() {
         print("Create account pressed.")
+        DispatchQueue.main.async {
+            let navController = UINavigationController.plainStyledNavigationController()
+            let signUpVC = SignUpVC()
+            navController.pushViewController(signUpVC, animated: false)
+            self.present(navController, animated: true)
+        }
     }
 
     @objc private func onLoginPressed() {
         print("Login clicked.")
-
-        let testVC = TestVC()
-        self.present(testVC, animated: true, completion: nil)
     }
 
     //Components
     let stackHeader = HeaderStack()
+    
     let stackEmailPassword = EmailPasswordStack()
     
     let labelDontHaveAccount: UILabel = {
