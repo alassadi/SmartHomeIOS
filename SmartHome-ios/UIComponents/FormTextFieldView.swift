@@ -8,6 +8,16 @@
 
 import UIKit
 
+enum FormTextFieldType {
+    case normal
+    case email
+    case phone
+    case password
+    case numerical
+    case dropDown
+    case dropDownDate
+}
+
 /* Delegate methods for any subview in this class can be implemented
  as an extension at the bottom of this file and can be recalled inside
  this protocol when a higher level delegation needed. */
@@ -19,10 +29,11 @@ protocol IconAndLinedTextFieldViewDelegate {
 class FormTextFieldView: UIView {
 
     var delegate: IconAndLinedTextFieldViewDelegate?
+    var isADropDownMenu = false
     let defaultIconSize: CGFloat = 20
     var iconSize: CGFloat?
 
-    init(height: CGFloat = 200, placeholder: String?, icon: UIImage?, iconSize: CGFloat?, tintColor: UIColor?) {
+    init(type: FormTextFieldType = .normal, height: CGFloat = 40, placeholder: String?, icon: UIImage?, iconSize: CGFloat? = 20, tintColor: UIColor?) {
         //Set field variables here.
         /* iconSize is used to determine the size of the icon subview. If it is not
          given it will be accepted as whatever the defaultIconSize field variable has its constant
@@ -46,6 +57,19 @@ class FormTextFieldView: UIView {
 
         if let icon = icon {
             self.icon.image = icon
+        }
+
+        switch type {
+        case FormTextFieldType.normal:
+            print("NORMAL")
+        case FormTextFieldType.email: break
+        case FormTextFieldType.phone: break
+        case FormTextFieldType.password: break
+        case FormTextFieldType.numerical: break
+        case FormTextFieldType.dropDown:
+            print("DROPDOWN")
+        case FormTextFieldType.dropDownDate:
+            print("DROPDOWNDATE")
         }
 
         self.setConstraints()
@@ -107,5 +131,29 @@ extension FormTextFieldView: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.bottomLine.backgroundColor = .black
         self.delegate?.textFieldDidBeginEditing()
+    }
+}
+
+//For turning the textfield into a DropDown menu.
+extension FormTextFieldView {
+    func setAsADropDownMenu(picker: UIPickerView? = nil, datePicker: UIDatePicker? = nil) {
+        isADropDownMenu = true
+        let dropDownIcon = UIImageView(image: #imageLiteral(resourceName: "drop-solid"))
+        dropDownIcon.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(dropDownIcon)
+        NSLayoutConstraint.activate([
+                dropDownIcon.trailingAnchor.constraint(equalTo: textField.trailingAnchor),
+                dropDownIcon.centerYAnchor.constraint(equalTo: textField.centerYAnchor),
+                dropDownIcon.heightAnchor.constraint(equalToConstant: 10),
+                dropDownIcon.widthAnchor.constraint(equalToConstant: 10)
+            ])
+    }
+}
+
+//For input validation.
+extension FormTextFieldView {
+    func isInputValid() -> Bool {
+
+        return false
     }
 }

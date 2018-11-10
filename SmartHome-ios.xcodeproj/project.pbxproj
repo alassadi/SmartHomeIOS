@@ -15,6 +15,7 @@
 		CB7C7FC9218A5D4600C64E95 /* UIGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7C7FC8218A5D4600C64E95 /* UIGroup.swift */; };
 		CB7FCE63217E2CB1001042A0 /* RoundedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FCE62217E2CB1001042A0 /* RoundedButtonView.swift */; };
 		CB811ABB21971E27009BFC3A /* SignUpVC+FormScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB811ABA21971E27009BFC3A /* SignUpVC+FormScroll.swift */; };
+		CB811ABF21976756009BFC3A /* SignUp2VC+FormScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB811ABE21976756009BFC3A /* SignUp2VC+FormScroll.swift */; };
 		CB9C5644218A21BA00E107BA /* LoginVC+HeaderStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9C5643218A21BA00E107BA /* LoginVC+HeaderStack.swift */; };
 		CB9C5647218A248100E107BA /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9C5646218A248100E107BA /* TestVC.swift */; };
 		CB9C564A218A251800E107BA /* NetworkEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9C5649218A251800E107BA /* NetworkEnums.swift */; };
@@ -69,6 +70,7 @@
 		CB7C7FC8218A5D4600C64E95 /* UIGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGroup.swift; sourceTree = "<group>"; };
 		CB7FCE62217E2CB1001042A0 /* RoundedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonView.swift; sourceTree = "<group>"; };
 		CB811ABA21971E27009BFC3A /* SignUpVC+FormScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpVC+FormScroll.swift"; sourceTree = "<group>"; };
+		CB811ABE21976756009BFC3A /* SignUp2VC+FormScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp2VC+FormScroll.swift"; sourceTree = "<group>"; };
 		CB9C5643218A21BA00E107BA /* LoginVC+HeaderStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+HeaderStack.swift"; sourceTree = "<group>"; };
 		CB9C5646218A248100E107BA /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		CB9C5649218A251800E107BA /* NetworkEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnums.swift; sourceTree = "<group>"; };
@@ -167,6 +169,15 @@
 			path = Step1;
 			sourceTree = "<group>";
 		};
+		CB811ABD21976726009BFC3A /* Step2 */ = {
+			isa = PBXGroup;
+			children = (
+				CB46B92621962CBE00B38E82 /* SignUp2VC.swift */,
+				CB811ABE21976756009BFC3A /* SignUp2VC+FormScroll.swift */,
+			);
+			path = Step2;
+			sourceTree = "<group>";
+		};
 		CB9C5645218A245C00E107BA /* TestForLab3 */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,7 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				CB811ABC21971E30009BFC3A /* Step1 */,
-				CB46B92621962CBE00B38E82 /* SignUp2VC.swift */,
+				CB811ABD21976726009BFC3A /* Step2 */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -517,6 +528,7 @@
 				CBA6EEF22194A3DA00FF963E /* SignUpVC.swift in Sources */,
 				CBB9F9D32179EA830009AC69 /* SmartHome_ios.xcdatamodeld in Sources */,
 				CB46B9252196037B00B38E82 /* UIGroup+Components.swift in Sources */,
+				CB811ABF21976756009BFC3A /* SignUp2VC+FormScroll.swift in Sources */,
 				CB811ABB21971E27009BFC3A /* SignUpVC+FormScroll.swift in Sources */,
 				CBB9F9FE2179ECC40009AC69 /* LoginVC.swift in Sources */,
 				CB9C564A218A251800E107BA /* NetworkEnums.swift in Sources */,

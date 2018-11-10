@@ -79,7 +79,6 @@ class LoginVC: UIViewController {
         button.setTitle("Create new account", for: .normal) //Localize
         button.setTitleColor(.red, for: .normal)
         button.isEnabled = true
-        
         return button
     }()
 }
