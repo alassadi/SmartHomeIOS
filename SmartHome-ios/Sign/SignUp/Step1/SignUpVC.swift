@@ -37,9 +37,48 @@ class SignUpVC: UIViewController {
     let createAccountForm = CreateAccountFormView()
 }
 
+//For CreateAccountFormView delegation.
 extension SignUpVC: CreateAccountFormViewDelegate {
     func onContinuePressed() {
-        let signUpPart2 = SignUp2VC()
-        self.navigationController?.pushViewController(signUpPart2, animated: true)
+        if self.inputsValid() {
+            let signUpPart2 = SignUp2VC()
+            signUpPart2.step1Form = [
+                "first_name":createAccountForm.nameField.textField.text!,
+                "last_name":createAccountForm.surnameField.textField.text!,
+                "email":createAccountForm.emailField.textField.text!,
+                "phone":createAccountForm.phoneField.textField.text!,
+                "password":createAccountForm.passwordField.textField.text!
+            ]
+            self.navigationController?.pushViewController(signUpPart2, animated: true)
+        } else {
+            self.presentAlert(title: "Error", message: "Fields could not be validated.")
+        }
     }
 }
+
+//Validation before continue
+extension SignUpVC {
+    private func inputsValid() -> Bool {
+        if let fieldViews = self.createAccountForm.fieldViews {
+            for fieldView in fieldViews {
+                if !fieldView.hasValidInput() {
+                    fieldView.bottomLine.alpha = 1.0
+                    fieldView.bottomLine.backgroundColor = .red
+                    return false
+                }
+            }
+        } else {
+            print("No fields found.")
+            return false
+        }
+        //Should not be located here. Try to keep rule logic outside of VC
+        if self.createAccountForm.passwordField.textField.text
+            != self.createAccountForm.confirmPasswordField.textField.text {
+            self.createAccountForm.confirmPasswordField.bottomLine.backgroundColor = .red
+            self.presentAlert(title: "Error", message: "Passwords do not match!")//Localize
+            return false
+        }
+        return true
+    }
+}
+

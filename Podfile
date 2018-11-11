@@ -7,6 +7,7 @@ target 'SmartHome-ios' do
 
   # Pods for SmartHome-ios
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
   pod 'Firebase/Messaging'
 
   target 'SmartHome-iosTests' do

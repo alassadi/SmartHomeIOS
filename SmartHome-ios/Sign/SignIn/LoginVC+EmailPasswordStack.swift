@@ -16,7 +16,7 @@ class EmailPasswordStack: UIStackView {
         
         self.spacing = 20
         self.axis = .vertical
-        [textFieldUsername,
+        [textFieldEmail,
          viewDividerUsername,
          textFieldPassword,
          viewDividerPassword,
@@ -30,7 +30,7 @@ class EmailPasswordStack: UIStackView {
     }
 
     //Components
-    let textFieldUsername: UITextField = {
+    let textFieldEmail: UITextField = {
         let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
         field.placeholder = "Username or Email" //Localize
@@ -50,6 +50,7 @@ class EmailPasswordStack: UIStackView {
     let textFieldPassword: UITextField = {
         let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
+        field.isSecureTextEntry = true
         field.placeholder = "Password" //Localize
         return field
     }()

@@ -12,15 +12,19 @@ protocol CreateAccountFormViewDelegate {
     func onContinuePressed()
 }
 
+//TODO: Turn this into a generic UIComponent.
 class CreateAccountFormView: UIView {
 
     var delegate: CreateAccountFormViewDelegate?
+    var fieldViews: [FormTextFieldView]?
 
     init() {
-        //Set field variables here.
-
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
+
+        //List of fields within this form.
+        fieldViews = [self.nameField, self.surnameField, self.emailField,
+                      self.phoneField, self.passwordField, self.confirmPasswordField]
 
         self.setConstraints()
         self.initTargets()
@@ -60,7 +64,7 @@ class CreateAccountFormView: UIView {
             self.labelCreateAnAccount.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
             self.stackView.topAnchor.constraint(equalTo: self.labelCreateAnAccount.bottomAnchor, constant: 30),
             self.stackView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
-            self.stackView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 100),
+            self.stackView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 80),
             self.continueButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 50),
             self.continueButton.widthAnchor.constraint(equalTo: scrollView.widthAnchor, multiplier: 0.7),
             self.continueButton.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
@@ -100,10 +104,10 @@ class CreateAccountFormView: UIView {
 
     let nameField = FormTextFieldView.init(placeholder: "Name", icon: #imageLiteral(resourceName: "person-solid"), iconSize: 20, tintColor: .red) //Localize
     let surnameField = FormTextFieldView.init(placeholder: "Surname", icon: nil, iconSize: 20, tintColor: .red) //Localize
-    let emailField = FormTextFieldView.init(placeholder: "Email", icon: #imageLiteral(resourceName: "email-solid"), iconSize: 20, tintColor: .red) //Localize
-    let phoneField = FormTextFieldView.init(placeholder: "Phone", icon: #imageLiteral(resourceName: "phone-solid"), iconSize: 20, tintColor: .red) //Localize
-    let passwordField = FormTextFieldView.init(placeholder: "Password", icon: #imageLiteral(resourceName: "lock-solid"), iconSize: 20, tintColor: .red) //Localize
-    let confirmPasswordField = FormTextFieldView.init(placeholder: "Confirm password", icon: nil, iconSize: 20, tintColor: .red) //Localize
+    let emailField = FormTextFieldView.init(type: .email, placeholder: "Email", icon: #imageLiteral(resourceName: "email-solid"), iconSize: 20, tintColor: .red) //Localize
+    let phoneField = FormTextFieldView.init(type: .phone, placeholder: "Phone", icon: #imageLiteral(resourceName: "phone-solid"), iconSize: 20, tintColor: .red) //Localize
+    let passwordField = FormTextFieldView.init(type: .password, placeholder: "Password", icon: #imageLiteral(resourceName: "lock-solid"), iconSize: 20, tintColor: .red) //Localize
+    let confirmPasswordField = FormTextFieldView.init(type: .password, placeholder: "Confirm password", icon: nil, iconSize: 20, tintColor: .red) //Localize
 
     let continueButton = RoundedButtonView(title: "Continue", backgroundColor: .red) //Localize
 }
