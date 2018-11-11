@@ -10,10 +10,18 @@
 		0F0F559A733ADAA07E025DB3 /* Pods_SmartHome_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A14F5B95ECF5F7A2278464F2 /* Pods_SmartHome_iosUITests.framework */; };
 		26726F8B5F84A344EE20D682 /* Pods_SmartHome_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E86BE15E847DCE890EDDCBA /* Pods_SmartHome_ios.framework */; };
 		A1FA6DCEAAB3E86737459555 /* Pods_SmartHome_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0519320208578FF660DEF5FD /* Pods_SmartHome_iosTests.framework */; };
+		CB46B9252196037B00B38E82 /* UIGroup+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB46B9242196037B00B38E82 /* UIGroup+Components.swift */; };
+		CB46B92721962CBE00B38E82 /* SignUp2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB46B92621962CBE00B38E82 /* SignUp2VC.swift */; };
 		CB7C7FC9218A5D4600C64E95 /* UIGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7C7FC8218A5D4600C64E95 /* UIGroup.swift */; };
 		CB7FCE63217E2CB1001042A0 /* RoundedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FCE62217E2CB1001042A0 /* RoundedButtonView.swift */; };
-		CB9C5644218A21BA00E107BA /* HeaderStack+LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9C5643218A21BA00E107BA /* HeaderStack+LoginVC.swift */; };
-		CB9C5647218A248100E107BA /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9C5646218A248100E107BA /* TestVC.swift */; };
+		CB811ABB21971E27009BFC3A /* SignUpVC+FormScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB811ABA21971E27009BFC3A /* SignUpVC+FormScroll.swift */; };
+		CB811ABF21976756009BFC3A /* SignUp2VC+FormScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB811ABE21976756009BFC3A /* SignUp2VC+FormScroll.swift */; };
+		CB997C4E2198109C0059E119 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB997C4D2198109C0059E119 /* Regex.swift */; };
+		CB997C5121982E710059E119 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB997C5021982E710059E119 /* Strings.swift */; };
+		CB997C55219843350059E119 /* AccountCreationConfirmedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB997C54219843350059E119 /* AccountCreationConfirmedVC.swift */; };
+		CB997C5721986FC20059E119 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB997C5621986FC20059E119 /* Box.swift */; };
+		CB997C5A219876110059E119 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB997C59219876110059E119 /* MainVC.swift */; };
+		CB9C5644218A21BA00E107BA /* LoginVC+HeaderStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9C5643218A21BA00E107BA /* LoginVC+HeaderStack.swift */; };
 		CB9C564A218A251800E107BA /* NetworkEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9C5649218A251800E107BA /* NetworkEnums.swift */; };
 		CB9C564D218A269700E107BA /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9C564C218A269700E107BA /* Utility.swift */; };
 		CB9C564F218A26D200E107BA /* SmartHomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9C564E218A26D200E107BA /* SmartHomeAPI.swift */; };
@@ -22,6 +30,7 @@
 		CB9C5655218A287900E107BA /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9C5654218A287900E107BA /* Models.swift */; };
 		CBA6EEEF21946C8A00FF963E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBA6EEEE21946C8A00FF963E /* GoogleService-Info.plist */; };
 		CBA6EEF22194A3DA00FF963E /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA6EEF12194A3DA00FF963E /* SignUpVC.swift */; };
+		CBA6EEF42194AFB000FF963E /* FormTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA6EEF32194AFB000FF963E /* FormTextFieldView.swift */; };
 		CBB9F9CB2179EA830009AC69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9CA2179EA830009AC69 /* AppDelegate.swift */; };
 		CBB9F9D32179EA830009AC69 /* SmartHome_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9D12179EA830009AC69 /* SmartHome_ios.xcdatamodeld */; };
 		CBB9F9D52179EA840009AC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB9F9D42179EA840009AC69 /* Assets.xcassets */; };
@@ -30,7 +39,7 @@
 		CBB9F9EE2179EA840009AC69 /* SmartHome_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9ED2179EA840009AC69 /* SmartHome_iosUITests.swift */; };
 		CBB9F9FC2179EBB70009AC69 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9FB2179EBB70009AC69 /* HomeVC.swift */; };
 		CBB9F9FE2179ECC40009AC69 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9FD2179ECC40009AC69 /* LoginVC.swift */; };
-		CBD43303217E81BC00CE9C44 /* EmailPasswordStack+LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD43302217E81BC00CE9C44 /* EmailPasswordStack+LoginVC.swift */; };
+		CBD43303217E81BC00CE9C44 /* LoginVC+EmailPasswordStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD43302217E81BC00CE9C44 /* LoginVC+EmailPasswordStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,10 +69,18 @@
 		A14F5B95ECF5F7A2278464F2 /* Pods_SmartHome_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartHome_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6138E6881B56ECAA82E3E1A /* Pods-SmartHome-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHome-iosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartHome-iosUITests/Pods-SmartHome-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BAC54E85D922C2C64F21BCA6 /* Pods-SmartHome-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHome-iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartHome-iosUITests/Pods-SmartHome-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CB46B9242196037B00B38E82 /* UIGroup+Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIGroup+Components.swift"; sourceTree = "<group>"; };
+		CB46B92621962CBE00B38E82 /* SignUp2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp2VC.swift; sourceTree = "<group>"; };
 		CB7C7FC8218A5D4600C64E95 /* UIGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGroup.swift; sourceTree = "<group>"; };
 		CB7FCE62217E2CB1001042A0 /* RoundedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonView.swift; sourceTree = "<group>"; };
-		CB9C5643218A21BA00E107BA /* HeaderStack+LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeaderStack+LoginVC.swift"; sourceTree = "<group>"; };
-		CB9C5646218A248100E107BA /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+		CB811ABA21971E27009BFC3A /* SignUpVC+FormScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpVC+FormScroll.swift"; sourceTree = "<group>"; };
+		CB811ABE21976756009BFC3A /* SignUp2VC+FormScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp2VC+FormScroll.swift"; sourceTree = "<group>"; };
+		CB997C4D2198109C0059E119 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		CB997C5021982E710059E119 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		CB997C54219843350059E119 /* AccountCreationConfirmedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCreationConfirmedVC.swift; sourceTree = "<group>"; };
+		CB997C5621986FC20059E119 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		CB997C59219876110059E119 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		CB9C5643218A21BA00E107BA /* LoginVC+HeaderStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+HeaderStack.swift"; sourceTree = "<group>"; };
 		CB9C5649218A251800E107BA /* NetworkEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnums.swift; sourceTree = "<group>"; };
 		CB9C564C218A269700E107BA /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		CB9C564E218A26D200E107BA /* SmartHomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHomeAPI.swift; sourceTree = "<group>"; };
@@ -73,6 +90,7 @@
 		CBA6EEED21946B3700FF963E /* SmartHome-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SmartHome-ios.entitlements"; sourceTree = "<group>"; };
 		CBA6EEEE21946C8A00FF963E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CBA6EEF12194A3DA00FF963E /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		CBA6EEF32194AFB000FF963E /* FormTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextFieldView.swift; sourceTree = "<group>"; };
 		CBB9F9C72179EA830009AC69 /* SmartHome-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmartHome-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB9F9CA2179EA830009AC69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBB9F9D22179EA830009AC69 /* SmartHome_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmartHome_ios.xcdatamodel; sourceTree = "<group>"; };
@@ -87,7 +105,7 @@
 		CBB9F9EF2179EA840009AC69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBB9F9FB2179EBB70009AC69 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		CBB9F9FD2179ECC40009AC69 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		CBD43302217E81BC00CE9C44 /* EmailPasswordStack+LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmailPasswordStack+LoginVC.swift"; sourceTree = "<group>"; };
+		CBD43302217E81BC00CE9C44 /* LoginVC+EmailPasswordStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+EmailPasswordStack.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,16 +163,72 @@
 			isa = PBXGroup;
 			children = (
 				CB7FCE62217E2CB1001042A0 /* RoundedButtonView.swift */,
+				CBA6EEF32194AFB000FF963E /* FormTextFieldView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
 		};
-		CB9C5645218A245C00E107BA /* TestForLab3 */ = {
+		CB811ABC21971E30009BFC3A /* Step1 */ = {
 			isa = PBXGroup;
 			children = (
-				CB9C5646218A248100E107BA /* TestVC.swift */,
+				CBA6EEF12194A3DA00FF963E /* SignUpVC.swift */,
+				CB811ABA21971E27009BFC3A /* SignUpVC+FormScroll.swift */,
 			);
-			path = TestForLab3;
+			path = Step1;
+			sourceTree = "<group>";
+		};
+		CB811ABD21976726009BFC3A /* Step2 */ = {
+			isa = PBXGroup;
+			children = (
+				CB46B92621962CBE00B38E82 /* SignUp2VC.swift */,
+				CB811ABE21976756009BFC3A /* SignUp2VC+FormScroll.swift */,
+			);
+			path = Step2;
+			sourceTree = "<group>";
+		};
+		CB997C4C219810760059E119 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CB997C4D2198109C0059E119 /* Regex.swift */,
+				CB997C5621986FC20059E119 /* Box.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CB997C4F21982E5B0059E119 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CB997C5021982E710059E119 /* Strings.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		CB997C522198357C0059E119 /* Pack */ = {
+			isa = PBXGroup;
+			children = (
+				CB9C564B218A268200E107BA /* Extensions */,
+				CB997C4C219810760059E119 /* Utilities */,
+				CB7FCE61217E2C90001042A0 /* UIComponents */,
+				CB997C4F21982E5B0059E119 /* Constants */,
+				CB9C5648218A24B400E107BA /* NetworkLayer */,
+			);
+			path = Pack;
+			sourceTree = "<group>";
+		};
+		CB997C532198430B0059E119 /* Confirmed */ = {
+			isa = PBXGroup;
+			children = (
+				CB997C54219843350059E119 /* AccountCreationConfirmedVC.swift */,
+			);
+			path = Confirmed;
+			sourceTree = "<group>";
+		};
+		CB997C58219876040059E119 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CB997C59219876110059E119 /* MainVC.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		CB9C5648218A24B400E107BA /* NetworkLayer */ = {
@@ -174,6 +248,7 @@
 			children = (
 				CB9C564C218A269700E107BA /* Utility.swift */,
 				CB7C7FC8218A5D4600C64E95 /* UIGroup.swift */,
+				CB46B9242196037B00B38E82 /* UIGroup+Components.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -181,7 +256,9 @@
 		CBA6EEF02194A3B100FF963E /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				CBA6EEF12194A3DA00FF963E /* SignUpVC.swift */,
+				CB811ABC21971E30009BFC3A /* Step1 */,
+				CB811ABD21976726009BFC3A /* Step2 */,
+				CB997C532198430B0059E119 /* Confirmed */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -212,9 +289,8 @@
 			isa = PBXGroup;
 			children = (
 				CBD43300217E816100CE9C44 /* Sign */,
-				CB9C5648218A24B400E107BA /* NetworkLayer */,
-				CB9C564B218A268200E107BA /* Extensions */,
-				CB7FCE61217E2C90001042A0 /* UIComponents */,
+				CB997C58219876040059E119 /* Main */,
+				CB997C522198357C0059E119 /* Pack */,
 				CBB9F9FB2179EBB70009AC69 /* HomeVC.swift */,
 				CBB9F9CA2179EA830009AC69 /* AppDelegate.swift */,
 				CBB9F9D42179EA840009AC69 /* Assets.xcassets */,
@@ -248,9 +324,8 @@
 		CBD43300217E816100CE9C44 /* Sign */ = {
 			isa = PBXGroup;
 			children = (
-				CB9C5645218A245C00E107BA /* TestForLab3 */,
-				CBA6EEF02194A3B100FF963E /* SignUp */,
 				CBD43301217E819700CE9C44 /* SignIn */,
+				CBA6EEF02194A3B100FF963E /* SignUp */,
 			);
 			path = Sign;
 			sourceTree = "<group>";
@@ -259,8 +334,8 @@
 			isa = PBXGroup;
 			children = (
 				CBB9F9FD2179ECC40009AC69 /* LoginVC.swift */,
-				CBD43302217E81BC00CE9C44 /* EmailPasswordStack+LoginVC.swift */,
-				CB9C5643218A21BA00E107BA /* HeaderStack+LoginVC.swift */,
+				CBD43302217E81BC00CE9C44 /* LoginVC+EmailPasswordStack.swift */,
+				CB9C5643218A21BA00E107BA /* LoginVC+HeaderStack.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -408,12 +483,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SmartHome-ios/Pods-SmartHome-ios-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -484,22 +561,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBA6EEF42194AFB000FF963E /* FormTextFieldView.swift in Sources */,
+				CB46B92721962CBE00B38E82 /* SignUp2VC.swift in Sources */,
 				CB9C5653218A272900E107BA /* Dispatcher.swift in Sources */,
 				CB9C564F218A26D200E107BA /* SmartHomeAPI.swift in Sources */,
 				CB9C564D218A269700E107BA /* Utility.swift in Sources */,
-				CB9C5647218A248100E107BA /* TestVC.swift in Sources */,
 				CB7C7FC9218A5D4600C64E95 /* UIGroup.swift in Sources */,
+				CB997C5A219876110059E119 /* MainVC.swift in Sources */,
 				CB9C5651218A26FD00E107BA /* RequestData.swift in Sources */,
-				CBD43303217E81BC00CE9C44 /* EmailPasswordStack+LoginVC.swift in Sources */,
+				CBD43303217E81BC00CE9C44 /* LoginVC+EmailPasswordStack.swift in Sources */,
+				CB997C55219843350059E119 /* AccountCreationConfirmedVC.swift in Sources */,
 				CBB9F9FC2179EBB70009AC69 /* HomeVC.swift in Sources */,
 				CBA6EEF22194A3DA00FF963E /* SignUpVC.swift in Sources */,
 				CBB9F9D32179EA830009AC69 /* SmartHome_ios.xcdatamodeld in Sources */,
+				CB46B9252196037B00B38E82 /* UIGroup+Components.swift in Sources */,
+				CB811ABF21976756009BFC3A /* SignUp2VC+FormScroll.swift in Sources */,
+				CB811ABB21971E27009BFC3A /* SignUpVC+FormScroll.swift in Sources */,
 				CBB9F9FE2179ECC40009AC69 /* LoginVC.swift in Sources */,
 				CB9C564A218A251800E107BA /* NetworkEnums.swift in Sources */,
-				CB9C5644218A21BA00E107BA /* HeaderStack+LoginVC.swift in Sources */,
+				CB9C5644218A21BA00E107BA /* LoginVC+HeaderStack.swift in Sources */,
 				CB7FCE63217E2CB1001042A0 /* RoundedButtonView.swift in Sources */,
 				CBB9F9CB2179EA830009AC69 /* AppDelegate.swift in Sources */,
 				CB9C5655218A287900E107BA /* Models.swift in Sources */,
+				CB997C5721986FC20059E119 /* Box.swift in Sources */,
+				CB997C4E2198109C0059E119 /* Regex.swift in Sources */,
+				CB997C5121982E710059E119 /* Strings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +758,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J3YTT4MZXD;
 				INFOPLIST_FILE = "SmartHome-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -694,6 +781,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J3YTT4MZXD;
 				INFOPLIST_FILE = "SmartHome-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -12,22 +12,16 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        initUI()
+        //TODO: Add a Sync State UI
+
+        initApp()
     }
     
-    private func initUI() {
+    private func initApp() {
         DispatchQueue.main.async {
-            self.view.backgroundColor = .white
-            self.view.addSubview(self.loginVC.view)
-            NSLayoutConstraint.activate([
-                self.loginVC.view.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-                self.loginVC.view.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
-                self.loginVC.view.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
-                self.loginVC.view.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor)
-                ])
+            //TODO: Check if already logged in
+            let loginVC = LoginVC()
+            self.present(loginVC, animated: false)
         }
     }
-    
-    let loginVC = LoginVC()
 }

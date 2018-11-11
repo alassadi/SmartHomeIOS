@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.translatesAutoresizingMaskIntoConstraints = false
+        self.view.backgroundColor = .white
+        self.setHideKeyboardOnTap()
         
         initUI()
         initTargets()
@@ -19,7 +21,6 @@ class LoginVC: UIViewController {
     
     private func initUI() {
         DispatchQueue.main.async {
-            self.activateHideKeyboardOnTap()
             self.view.addSubview(self.stackHeader)
             self.view.addSubview(self.stackEmailPassword)
             self.view.addSubview(self.buttonCreateAccount)
@@ -49,17 +50,46 @@ class LoginVC: UIViewController {
     
     @objc private func onCreateAccountPressed() {
         print("Create account pressed.")
+        DispatchQueue.main.async {
+            let navController = UINavigationController.plainStyledNavigationController()
+            let signUpVC = SignUpVC()
+            navController.pushViewController(signUpVC, animated: false)
+            self.present(navController, animated: true)
+        }
     }
 
     @objc private func onLoginPressed() {
-        print("Login clicked.")
+        guard let email = self.stackEmailPassword.textFieldEmail.text  else {
+            self.presentAlert(title: "Error", message: "Invalid email.") // Localize
+            return
+        }
 
-        let testVC = TestVC()
-        self.present(testVC, animated: true, completion: nil)
+        guard let password = self.stackEmailPassword.textFieldPassword.text else {
+            self.presentAlert(title: "Error", message: "Invalid password.") // Localize
+            return
+        }
+
+        if !email.isEmpty, !password.isEmpty {
+            Auth.auth().signIn(withEmail: email, password: password) {
+                (user, error) in
+                if let error = error {
+                    print(error)
+                }
+                if let user = user {
+                    let mainVC = MainVC()
+                    print(user)
+                    //TODO: save user id
+                    self.present(mainVC, animated: true)
+                }
+            }
+        } else {
+            self.presentAlert(title: "Error", message: "Fields are empty!")
+        }
     }
 
     //Components
     let stackHeader = HeaderStack()
+    
     let stackEmailPassword = EmailPasswordStack()
     
     let labelDontHaveAccount: UILabel = {
