@@ -29,3 +29,10 @@ struct _user: Codable {
     var date_of_birth: String?
     var gender: String?
 }
+
+struct _device_status: Codable {
+    let enabled: Bool?
+    let name: String?
+    let room_id: String?
+    let version: Double?
+}

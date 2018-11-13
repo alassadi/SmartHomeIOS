@@ -14,6 +14,9 @@
 		CB46B92721962CBE00B38E82 /* SignUp2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB46B92621962CBE00B38E82 /* SignUp2VC.swift */; };
 		CB7C7FC9218A5D4600C64E95 /* UIGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7C7FC8218A5D4600C64E95 /* UIGroup.swift */; };
 		CB7FCE63217E2CB1001042A0 /* RoundedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FCE62217E2CB1001042A0 /* RoundedButtonView.swift */; };
+		CB80836F219A17050067A6C5 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB80836E219A17050067A6C5 /* SideMenuVC.swift */; };
+		CB808372219A171C0067A6C5 /* MainNavigatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB808371219A171C0067A6C5 /* MainNavigatorVC.swift */; };
+		CB808375219A196F0067A6C5 /* SwipeMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB808374219A196F0067A6C5 /* SwipeMenuViewController.swift */; };
 		CB811ABB21971E27009BFC3A /* SignUpVC+FormScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB811ABA21971E27009BFC3A /* SignUpVC+FormScroll.swift */; };
 		CB811ABF21976756009BFC3A /* SignUp2VC+FormScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB811ABE21976756009BFC3A /* SignUp2VC+FormScroll.swift */; };
 		CB997C4E2198109C0059E119 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB997C4D2198109C0059E119 /* Regex.swift */; };
@@ -73,6 +76,9 @@
 		CB46B92621962CBE00B38E82 /* SignUp2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp2VC.swift; sourceTree = "<group>"; };
 		CB7C7FC8218A5D4600C64E95 /* UIGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGroup.swift; sourceTree = "<group>"; };
 		CB7FCE62217E2CB1001042A0 /* RoundedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonView.swift; sourceTree = "<group>"; };
+		CB80836E219A17050067A6C5 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		CB808371219A171C0067A6C5 /* MainNavigatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigatorVC.swift; sourceTree = "<group>"; };
+		CB808374219A196F0067A6C5 /* SwipeMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeMenuViewController.swift; sourceTree = "<group>"; };
 		CB811ABA21971E27009BFC3A /* SignUpVC+FormScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpVC+FormScroll.swift"; sourceTree = "<group>"; };
 		CB811ABE21976756009BFC3A /* SignUp2VC+FormScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp2VC+FormScroll.swift"; sourceTree = "<group>"; };
 		CB997C4D2198109C0059E119 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
@@ -164,8 +170,25 @@
 			children = (
 				CB7FCE62217E2CB1001042A0 /* RoundedButtonView.swift */,
 				CBA6EEF32194AFB000FF963E /* FormTextFieldView.swift */,
+				CB808374219A196F0067A6C5 /* SwipeMenuViewController.swift */,
 			);
 			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		CB808370219A170C0067A6C5 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				CB80836E219A17050067A6C5 /* SideMenuVC.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		CB808373219A17210067A6C5 /* MainNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				CB808371219A171C0067A6C5 /* MainNavigatorVC.swift */,
+			);
+			path = MainNavigator;
 			sourceTree = "<group>";
 		};
 		CB811ABC21971E30009BFC3A /* Step1 */ = {
@@ -226,6 +249,8 @@
 		CB997C58219876040059E119 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				CB808373219A17210067A6C5 /* MainNavigator */,
+				CB808370219A170C0067A6C5 /* SideMenu */,
 				CB997C59219876110059E119 /* MainVC.swift */,
 			);
 			path = Main;
@@ -581,8 +606,11 @@
 				CB9C564A218A251800E107BA /* NetworkEnums.swift in Sources */,
 				CB9C5644218A21BA00E107BA /* LoginVC+HeaderStack.swift in Sources */,
 				CB7FCE63217E2CB1001042A0 /* RoundedButtonView.swift in Sources */,
+				CB80836F219A17050067A6C5 /* SideMenuVC.swift in Sources */,
 				CBB9F9CB2179EA830009AC69 /* AppDelegate.swift in Sources */,
+				CB808372219A171C0067A6C5 /* MainNavigatorVC.swift in Sources */,
 				CB9C5655218A287900E107BA /* Models.swift in Sources */,
+				CB808375219A196F0067A6C5 /* SwipeMenuViewController.swift in Sources */,
 				CB997C5721986FC20059E119 /* Box.swift in Sources */,
 				CB997C4E2198109C0059E119 /* Regex.swift in Sources */,
 				CB997C5121982E710059E119 /* Strings.swift in Sources */,

@@ -24,27 +24,43 @@ struct APICreateAccount: RequestType {
     }
 }
 
-struct APICreateFriend: RequestType {
-    typealias ResponseType = friend
+//struct APICreateFriend: RequestType {
+//    typealias ResponseType = friend
+//    private let headers = defaultHeaders
+//    public let params: [String:Any]
+//
+//    var data: RequestData {
+//        return RequestData(path: path.createFriend,
+//                           method: .POST,
+//                           params: params,
+//                           headers: headers)
+//    }
+//}
+
+struct APIUpdateDevice: RequestType {
+    typealias ResponseType = Bool
     private let headers = defaultHeaders
     public let params: [String:Any]
 
     var data: RequestData {
-        return RequestData(path: path.createFriend,
+        return RequestData(path: path.updateDevice,
                            method: .POST,
                            params: params,
                            headers: headers)
     }
 }
 
-struct APIGetFriend: RequestType {
-    typealias ResponseType = friend
+struct APIDeviceStatus: RequestType {
+    typealias ResponseType = _device_status
     private let headers = defaultHeaders
-    public let friendId: String
+    public let params: [String:String]
 
     var data: RequestData {
-        return RequestData(path: path.getFriend(with: friendId),
-                           method: .GET,
+        return RequestData(path: path.deviceStatus,
+                           method: .POST,
+                           params: params,
                            headers: headers)
     }
 }
+
+

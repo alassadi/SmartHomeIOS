@@ -10,7 +10,7 @@ import Foundation
 
 public typealias Parameters = [String:Any]
 
-let baseUrl = "https://us-central1-smarthome-3c6b9.cloudfunctions.net"
+let baseUrl = "https://europe-west1-smarthome-3c6b9.cloudfunctions.net"
 
 public enum HTTPMethod : String {
     case GET = "GET"
@@ -40,11 +40,13 @@ enum NetworkResponse: String {
 
 struct Path {
     public let base = baseUrl
+    public let updateDevice = "\(baseUrl)/updateDeviceThroughJson"
+    public let deviceStatus = "\(baseUrl)/getDeviceFromDBJson"
     public let createUser = "\(baseUrl)/createUser"
-    public let createFriend = "\(baseUrl)/friends"
-    public func getFriend(with id: String) -> String {
-        return "\(baseUrl)/friends/\(id)"
-    }
+    //public let createFriend = "\(baseUrl)/friends"
+//    public func getFriend(with id: String) -> String {
+//        return "\(baseUrl)/friends/\(id)"
+//    }
 }
 
 public func configuredHeaders(additionalHeaders: [String:String]?, headers: [String:String]) -> [String:String] {
