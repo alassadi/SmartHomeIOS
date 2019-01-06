@@ -47,16 +47,6 @@ class LoginVC: UIViewController {
             self.stackEmailPassword.buttonLogin.button.addTarget(self, action: #selector(self.onLoginPressed), for: .touchUpInside)
         }
     }
-    
-    @objc private func onCreateAccountPressed() {
-        print("Create account pressed.")
-        DispatchQueue.main.async {
-            let navController = UINavigationController.plainStyledNavigationController()
-            let signUpVC = SignUpVC()
-            navController.pushViewController(signUpVC, animated: false)
-            self.present(navController, animated: true)
-        }
-    }
 
     @objc private func onLoginPressed() {
         guard let email = self.stackEmailPassword.textFieldEmail.text  else {
@@ -71,19 +61,28 @@ class LoginVC: UIViewController {
 
         if !email.isEmpty, !password.isEmpty {
             Auth.auth().signIn(withEmail: email, password: password) {
-                (user, error) in
+                (auth, error) in
                 if let error = error {
                     print(error)
                 }
-                if let user = user {
+                if let auth = auth {
                     let mainVC = MainVC()
-                    print(user)
-                    //TODO: save user id
+                    UserDefaults.standard.setAppUserId(id: auth.user.uid)
                     self.present(mainVC, animated: true)
                 }
             }
         } else {
             self.presentAlert(title: "Error", message: "Fields are empty!")
+        }
+    }
+    
+    @objc private func onCreateAccountPressed() {
+        print("Create account pressed.")
+        DispatchQueue.main.async {
+            let navController = UINavigationController.plainStyledNavigationController()
+            let signUpVC = SignUpVC()
+            navController.pushViewController(signUpVC, animated: false)
+            self.present(navController, animated: true)
         }
     }
 

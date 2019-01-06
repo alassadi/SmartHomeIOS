@@ -8,11 +8,26 @@
 
 import UIKit
 
-class MainNavigatoVC: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
+class MainTabBarVC: UITabBarController {
 
-        self.view.backgroundColor = .blue
+    override func viewDidLoad() {
+        self.viewControllers = [self.dashboardVC, self.roomsVC].map({
+            UINavigationController(rootViewController: $0)
+        })
     }
+
+    let dashboardVC: DashboardVC = {
+        let vc = DashboardVC()
+        vc.tabBarItem = UITabBarItem(tabBarSystemItem: .recents, tag: 0)
+        vc.title = "Dashboard" //Todo: Localize
+        return vc
+    }()
+
+    let roomsVC: RoomsVC = {
+        let vc = RoomsVC()
+        vc.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
+        vc.title = "Rooms" //Todo: Localize
+        return vc
+    }()
 }
 

@@ -40,13 +40,8 @@ enum NetworkResponse: String {
 
 struct Path {
     public let base = baseUrl
-    public let updateDevice = "\(baseUrl)/updateDeviceThroughJson"
-    public let deviceStatus = "\(baseUrl)/getDeviceFromDBJson"
-    public let createUser = "\(baseUrl)/createUser"
-    //public let createFriend = "\(baseUrl)/friends"
-//    public func getFriend(with id: String) -> String {
-//        return "\(baseUrl)/friends/\(id)"
-//    }
+    public let createUser = "\(baseUrl)/users/"
+
 }
 
 public func configuredHeaders(additionalHeaders: [String:String]?, headers: [String:String]) -> [String:String] {

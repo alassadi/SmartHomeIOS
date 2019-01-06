@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+struct NotificationName {
+    static let FCM_TOKEN_RECEIVED = "FCM_TOKEN_RECEIVED"
+}

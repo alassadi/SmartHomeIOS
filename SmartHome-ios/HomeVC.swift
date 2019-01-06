@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HomeVC: UIViewController {
 
@@ -16,22 +17,26 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         //TODO: Add a Sync State UI
 
-        APIDeviceStatus(params: ["id":"my9iXu6WvEgx5oNLLegs"]).execute(onSuccess: { (device_status) in
-            if let status = device_status.enabled {
-                HomeVC.boxedStatus.value = status
-            }
-        }) { (error) in
-            print(error)
-        }
-
         initApp()
     }
     
     private func initApp() {
         DispatchQueue.main.async {
             //TODO: Check if already logged in
-            let loginVC = LoginVC()
-            self.present(loginVC, animated: false)
+
+            if let currentUser = Auth.auth().currentUser {
+
+                print(currentUser.email)
+                print(currentUser.uid)
+
+                let mainVC = MainVC()
+                self.present(mainVC, animated: false)
+            } else {
+                let loginVC = LoginVC()
+                self.present(loginVC, animated: false)
+            }
+
+
         }
     }
 }
