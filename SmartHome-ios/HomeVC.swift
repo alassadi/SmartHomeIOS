@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HomeVC: UIViewController {
+
+    static var boxedStatus = Box(true)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +23,20 @@ class HomeVC: UIViewController {
     private func initApp() {
         DispatchQueue.main.async {
             //TODO: Check if already logged in
-            let loginVC = LoginVC()
-            self.present(loginVC, animated: false)
+
+            if let currentUser = Auth.auth().currentUser {
+
+                print(currentUser.email)
+                print(currentUser.uid)
+
+                let mainVC = MainVC()
+                self.present(mainVC, animated: false)
+            } else {
+                let loginVC = LoginVC()
+                self.present(loginVC, animated: false)
+            }
+
+
         }
     }
 }

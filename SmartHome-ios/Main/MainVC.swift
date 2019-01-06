@@ -8,55 +8,46 @@
 
 import UIKit
 import FirebaseAuth
+import SnapKit
 
 class MainVC: UIViewController {
+
     override func viewDidLoad() {
-        super.viewDidLoad()
         self.view.backgroundColor = .white
+        self.view.addSubview(self.scrollView)
+        self.scrollView.addSubview(self.sideMenuVC.view)
+        self.scrollView.addSubview(self.mainTabBarVC.view)
 
-        self.setConstraints()
-        self.initTargets()
-    }
+        self.sideMenuVC.didMove(toParent: self)
+        self.mainTabBarVC.didMove(toParent: self)
 
-    fileprivate func setConstraints() {
-        DispatchQueue.main.async {
-            self.view.addSubview(self.button1)
-            self.view.addSubview(self.button2)
+        self.scrollView.snp.makeConstraints { (make) in
+            make.leading.top.trailing.bottom.equalTo(self.view)
+        }
 
-            NSLayoutConstraint.activate([
-                self.button1.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.7),
-                self.button1.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: -100),
-                self.button1.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-                self.button2.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.7),
-                self.button2.topAnchor.constraint(equalTo: self.button1.bottomAnchor, constant: 20),
-                self.button2.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
-                ])
+        self.sideMenuVC.view.snp.makeConstraints { (make) in
+            make.leading.top.bottom.equalToSuperview()
+            make.height.equalTo(self.scrollView.snp.height)
+            make.width.equalTo(UIScreen.main.bounds.width*0.8)
+        }
+
+        self.mainTabBarVC.view.snp.makeConstraints { (make) in
+            make.top.bottom.trailing.equalToSuperview()
+            make.leading.equalTo(self.sideMenuVC.view.snp.trailing)
+            make.width.equalTo(UIScreen.main.bounds.width)
         }
     }
 
-    fileprivate func initTargets() {
-        DispatchQueue.main.async {
-            self.button1.button.addTarget(self, action: #selector(self.onButton1Pressed), for: .touchUpInside)
-            self.button2.button.addTarget(self, action: #selector(self.onButton2Pressed), for: .touchUpInside)
-        }
-    }
+    let scrollView: UIScrollView = {
+        let view = UIScrollView()
+        view.isScrollEnabled = true
+        view.showsHorizontalScrollIndicator = false
+        view.showsVerticalScrollIndicator = false
+        view.isPagingEnabled = true
+        view.bounces = false
+        return view
+    }()
 
-    @objc func onButton1Pressed() {
-        print("LogOut")
-
-        do {
-            try Auth.auth().signOut()
-        } catch {
-            print("Could not log out")
-        }
-        self.present(LoginVC(), animated: true)
-    }
-
-    @objc func onButton2Pressed() {
-        print("SendFCM")
-    }
-
-    let button1 = RoundedButtonView(title: "Log Out", backgroundColor: .black)
-    let button2 = RoundedButtonView(title: "Send FCM registration id", backgroundColor: .blue)
-
+    let sideMenuVC = SideMenuVC()
+    let mainTabBarVC = MainTabBarVC()
 }

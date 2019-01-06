@@ -10,10 +10,15 @@
 		0F0F559A733ADAA07E025DB3 /* Pods_SmartHome_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A14F5B95ECF5F7A2278464F2 /* Pods_SmartHome_iosUITests.framework */; };
 		26726F8B5F84A344EE20D682 /* Pods_SmartHome_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E86BE15E847DCE890EDDCBA /* Pods_SmartHome_ios.framework */; };
 		A1FA6DCEAAB3E86737459555 /* Pods_SmartHome_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0519320208578FF660DEF5FD /* Pods_SmartHome_iosTests.framework */; };
+		CB1BBD0B21E24FA70018FAA0 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1BBD0A21E24FA70018FAA0 /* DashboardVC.swift */; };
+		CB1BBD0D21E24FD00018FAA0 /* RoomsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1BBD0C21E24FD00018FAA0 /* RoomsVC.swift */; };
+		CB1BBD1021E2B0620018FAA0 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1BBD0F21E2B0620018FAA0 /* UserDefaults.swift */; };
 		CB46B9252196037B00B38E82 /* UIGroup+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB46B9242196037B00B38E82 /* UIGroup+Components.swift */; };
 		CB46B92721962CBE00B38E82 /* SignUp2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB46B92621962CBE00B38E82 /* SignUp2VC.swift */; };
 		CB7C7FC9218A5D4600C64E95 /* UIGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7C7FC8218A5D4600C64E95 /* UIGroup.swift */; };
 		CB7FCE63217E2CB1001042A0 /* RoundedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FCE62217E2CB1001042A0 /* RoundedButtonView.swift */; };
+		CB80836F219A17050067A6C5 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB80836E219A17050067A6C5 /* SideMenuVC.swift */; };
+		CB808372219A171C0067A6C5 /* MainNavigatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB808371219A171C0067A6C5 /* MainNavigatorVC.swift */; };
 		CB811ABB21971E27009BFC3A /* SignUpVC+FormScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB811ABA21971E27009BFC3A /* SignUpVC+FormScroll.swift */; };
 		CB811ABF21976756009BFC3A /* SignUp2VC+FormScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB811ABE21976756009BFC3A /* SignUp2VC+FormScroll.swift */; };
 		CB997C4E2198109C0059E119 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB997C4D2198109C0059E119 /* Regex.swift */; };
@@ -69,10 +74,15 @@
 		A14F5B95ECF5F7A2278464F2 /* Pods_SmartHome_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartHome_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6138E6881B56ECAA82E3E1A /* Pods-SmartHome-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHome-iosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartHome-iosUITests/Pods-SmartHome-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BAC54E85D922C2C64F21BCA6 /* Pods-SmartHome-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHome-iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartHome-iosUITests/Pods-SmartHome-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CB1BBD0A21E24FA70018FAA0 /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
+		CB1BBD0C21E24FD00018FAA0 /* RoomsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsVC.swift; sourceTree = "<group>"; };
+		CB1BBD0F21E2B0620018FAA0 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		CB46B9242196037B00B38E82 /* UIGroup+Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIGroup+Components.swift"; sourceTree = "<group>"; };
 		CB46B92621962CBE00B38E82 /* SignUp2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp2VC.swift; sourceTree = "<group>"; };
 		CB7C7FC8218A5D4600C64E95 /* UIGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGroup.swift; sourceTree = "<group>"; };
 		CB7FCE62217E2CB1001042A0 /* RoundedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonView.swift; sourceTree = "<group>"; };
+		CB80836E219A17050067A6C5 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		CB808371219A171C0067A6C5 /* MainNavigatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigatorVC.swift; sourceTree = "<group>"; };
 		CB811ABA21971E27009BFC3A /* SignUpVC+FormScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpVC+FormScroll.swift"; sourceTree = "<group>"; };
 		CB811ABE21976756009BFC3A /* SignUp2VC+FormScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp2VC+FormScroll.swift"; sourceTree = "<group>"; };
 		CB997C4D2198109C0059E119 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
@@ -159,6 +169,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CB1BBD0821E24F7D0018FAA0 /* DashboardTab */ = {
+			isa = PBXGroup;
+			children = (
+				CB1BBD0A21E24FA70018FAA0 /* DashboardVC.swift */,
+			);
+			path = DashboardTab;
+			sourceTree = "<group>";
+		};
+		CB1BBD0921E24F8A0018FAA0 /* RoomsTab */ = {
+			isa = PBXGroup;
+			children = (
+				CB1BBD0C21E24FD00018FAA0 /* RoomsVC.swift */,
+			);
+			path = RoomsTab;
+			sourceTree = "<group>";
+		};
 		CB7FCE61217E2C90001042A0 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +192,22 @@
 				CBA6EEF32194AFB000FF963E /* FormTextFieldView.swift */,
 			);
 			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		CB808370219A170C0067A6C5 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				CB80836E219A17050067A6C5 /* SideMenuVC.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		CB808373219A17210067A6C5 /* MainNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				CB808371219A171C0067A6C5 /* MainNavigatorVC.swift */,
+			);
+			path = MainNavigator;
 			sourceTree = "<group>";
 		};
 		CB811ABC21971E30009BFC3A /* Step1 */ = {
@@ -226,6 +268,8 @@
 		CB997C58219876040059E119 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				CB808373219A17210067A6C5 /* MainNavigator */,
+				CB808370219A170C0067A6C5 /* SideMenu */,
 				CB997C59219876110059E119 /* MainVC.swift */,
 			);
 			path = Main;
@@ -249,6 +293,7 @@
 				CB9C564C218A269700E107BA /* Utility.swift */,
 				CB7C7FC8218A5D4600C64E95 /* UIGroup.swift */,
 				CB46B9242196037B00B38E82 /* UIGroup+Components.swift */,
+				CB1BBD0F21E2B0620018FAA0 /* UserDefaults.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -261,6 +306,15 @@
 				CB997C532198430B0059E119 /* Confirmed */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		CBB0357F21E2480300289131 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				CB1BBD0821E24F7D0018FAA0 /* DashboardTab */,
+				CB1BBD0921E24F8A0018FAA0 /* RoomsTab */,
+			);
+			path = Tabs;
 			sourceTree = "<group>";
 		};
 		CBB9F9BE2179EA830009AC69 = {
@@ -290,6 +344,7 @@
 			children = (
 				CBD43300217E816100CE9C44 /* Sign */,
 				CB997C58219876040059E119 /* Main */,
+				CBB0357F21E2480300289131 /* Tabs */,
 				CB997C522198357C0059E119 /* Pack */,
 				CBB9F9FB2179EBB70009AC69 /* HomeVC.swift */,
 				CBB9F9CA2179EA830009AC69 /* AppDelegate.swift */,
@@ -486,6 +541,8 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -493,6 +550,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,10 +621,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBA6EEF42194AFB000FF963E /* FormTextFieldView.swift in Sources */,
+				CB1BBD0D21E24FD00018FAA0 /* RoomsVC.swift in Sources */,
 				CB46B92721962CBE00B38E82 /* SignUp2VC.swift in Sources */,
 				CB9C5653218A272900E107BA /* Dispatcher.swift in Sources */,
 				CB9C564F218A26D200E107BA /* SmartHomeAPI.swift in Sources */,
 				CB9C564D218A269700E107BA /* Utility.swift in Sources */,
+				CB1BBD0B21E24FA70018FAA0 /* DashboardVC.swift in Sources */,
 				CB7C7FC9218A5D4600C64E95 /* UIGroup.swift in Sources */,
 				CB997C5A219876110059E119 /* MainVC.swift in Sources */,
 				CB9C5651218A26FD00E107BA /* RequestData.swift in Sources */,
@@ -581,8 +642,11 @@
 				CB9C564A218A251800E107BA /* NetworkEnums.swift in Sources */,
 				CB9C5644218A21BA00E107BA /* LoginVC+HeaderStack.swift in Sources */,
 				CB7FCE63217E2CB1001042A0 /* RoundedButtonView.swift in Sources */,
+				CB80836F219A17050067A6C5 /* SideMenuVC.swift in Sources */,
 				CBB9F9CB2179EA830009AC69 /* AppDelegate.swift in Sources */,
+				CB808372219A171C0067A6C5 /* MainNavigatorVC.swift in Sources */,
 				CB9C5655218A287900E107BA /* Models.swift in Sources */,
+				CB1BBD1021E2B0620018FAA0 /* UserDefaults.swift in Sources */,
 				CB997C5721986FC20059E119 /* Box.swift in Sources */,
 				CB997C4E2198109C0059E119 /* Regex.swift in Sources */,
 				CB997C5121982E710059E119 /* Strings.swift in Sources */,
