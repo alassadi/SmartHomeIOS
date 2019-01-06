@@ -41,7 +41,7 @@ enum NetworkResponse: String {
 struct Path {
     public let base = baseUrl
     public let createUser = "\(baseUrl)/users/"
-
+    public let registerUnit = "\(baseUrl)/units/\(UserDefaults.standard.getAppUserId() ?? "")" //Should be handled in a better place
 }
 
 public func configuredHeaders(additionalHeaders: [String:String]?, headers: [String:String]) -> [String:String] {

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 public struct URLSessionNetworkDispatcher: NetworkDispatcher {
 
@@ -15,12 +16,12 @@ public struct URLSessionNetworkDispatcher: NetworkDispatcher {
 
     public func dispatch(request: RequestData, onSuccess: @escaping (Data) -> Void, onError: @escaping (Error) -> Void) {
 
+        let dispatchGroup = DispatchGroup()
+
         guard let url = URL(string: request.path) else {
             onError(ConnError.invalidUrl)
             return
         }
-
-        print(url)
 
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = request.method.rawValue
@@ -43,41 +44,62 @@ public struct URLSessionNetworkDispatcher: NetworkDispatcher {
             headers = headers.merged(with: additionalHeaders)
         }
 
-        urlRequest.allHTTPHeaderFields = headers
-
-        URLSession.shared.dataTask(with: urlRequest) {
-            (data, response, error) in
-            if let error = error {
-                onError(error)
-                return
-            }
-            guard let _data = data else {
-                onError(ConnError.noData)
-                return
-            }
-            if let httpResponse = response as? HTTPURLResponse {
-
-                print(httpResponse.statusCode)
-
-                switch httpResponse.statusCode {
-                case 200...299:
-                    onSuccess(_data)
-                    return
-                case 400...499:
-                    onError(ConnError.unauthorized)
-                    return
-                case 500...599:
-                    onError(ConnError.badRequest)
-                    return
-                default:
-                    onError(ConnError.failure)
+        dispatchGroup.enter()
+        if !request.noAuth {
+            Auth.auth().currentUser?.getIDToken(completion: { (token, error) in
+                if let error = error {
+                    onError(error)
+                    dispatchGroup.leave()
                     return
                 }
-            } else {
-                print("Could not get http response")
-            }
-            }.resume()
 
+                if let token = token {
+                    headers = headers.merged(with: ["Authorization":"Bearer \(token)"])
+                    dispatchGroup.leave()
+                } else {
+                    onError(ConnError.unauthorized)
+                    dispatchGroup.leave()
+                    return
+                }
+            })
+            print(headers)
+        }
+
+        dispatchGroup.notify(queue: .main) {
+            urlRequest.allHTTPHeaderFields = headers
+            URLSession.shared.dataTask(with: urlRequest) {
+                (data, response, error) in
+                if let error = error {
+                    onError(error)
+                    return
+                }
+                guard let _data = data else {
+                    onError(ConnError.noData)
+                    return
+                }
+                if let httpResponse = response as? HTTPURLResponse {
+
+                    print(httpResponse.statusCode)
+
+                    switch httpResponse.statusCode {
+                    case 200...299:
+                        onSuccess(_data)
+                        return
+                    case 400...499:
+                        onError(ConnError.unauthorized)
+                        return
+                    case 500...599:
+                        onError(ConnError.badRequest)
+                        return
+                    default:
+                        onError(ConnError.failure)
+                        return
+                    }
+                } else {
+                    print("Could not get http response")
+                }
+                }.resume()
+        }
     }
 }
 

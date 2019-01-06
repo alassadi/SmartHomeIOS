@@ -14,18 +14,21 @@ public struct RequestData {
     public let params: [String:Any?]?
     public let headers: [String:String]?
     public let additionalHeaders: [String:String]?
+    public let noAuth: Bool
 
     public init (path: String,
                  method: HTTPMethod = .GET,
                  params: [String:Any?]? = nil,
                  headers: [String:String]? = nil,
-                 additionalHeaders: [String:String]? = nil) {
+                 additionalHeaders: [String:String]? = nil,
+                 noAuth: Bool = false) {
 
         self.path = path
         self.method = method
         self.params = params
         self.headers = headers
         self.additionalHeaders = additionalHeaders
+        self.noAuth = noAuth
     }
 }
 

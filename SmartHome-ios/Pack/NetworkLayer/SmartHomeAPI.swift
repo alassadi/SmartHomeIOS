@@ -23,3 +23,16 @@ struct APICreateAccount: RequestType {
                            headers: headers)
     }
 }
+
+struct APIRegisterUnit: RequestType {
+    typealias ResponseType = [String:String]
+    private let headers = defaultHeaders
+    public let params: [String:Any]
+
+    var data: RequestData {
+        return RequestData(path: path.registerUnit,
+                           method: .PUT,
+                           params: params,
+                           headers: headers)
+    }
+}

@@ -68,6 +68,13 @@ class LoginVC: UIViewController {
                 if let auth = auth {
                     let mainVC = MainVC()
                     UserDefaults.standard.setAppUserId(id: auth.user.uid)
+
+                    APIRegisterUnit(params: ["fcm_token":UserDefaults.standard.getFCMToken() ?? ""])
+                        .execute(onSuccess: { (response) in
+                    }, onError: { (error) in
+                        print(error)
+                    })
+
                     self.present(mainVC, animated: true)
                 }
             }
