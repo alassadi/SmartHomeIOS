@@ -24,6 +24,7 @@
 		CB811ABF21976756009BFC3A /* SignUp2VC+FormScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB811ABE21976756009BFC3A /* SignUp2VC+FormScroll.swift */; };
 		CB9740E221E4D49300BE1857 /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9740E121E4D49300BE1857 /* DeviceCell.swift */; };
 		CB9740E721E4DB2A00BE1857 /* Font Awesome 5 Pro-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB9740E621E4DB2A00BE1857 /* Font Awesome 5 Pro-Solid-900.otf */; };
+		CB9740E921E5388E00BE1857 /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9740E821E5388E00BE1857 /* SideMenuCell.swift */; };
 		CB997C4E2198109C0059E119 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB997C4D2198109C0059E119 /* Regex.swift */; };
 		CB997C5121982E710059E119 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB997C5021982E710059E119 /* Strings.swift */; };
 		CB997C55219843350059E119 /* AccountCreationConfirmedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB997C54219843350059E119 /* AccountCreationConfirmedVC.swift */; };
@@ -91,6 +92,7 @@
 		CB811ABE21976756009BFC3A /* SignUp2VC+FormScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp2VC+FormScroll.swift"; sourceTree = "<group>"; };
 		CB9740E121E4D49300BE1857 /* DeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
 		CB9740E621E4DB2A00BE1857 /* Font Awesome 5 Pro-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Pro-Solid-900.otf"; sourceTree = "<group>"; };
+		CB9740E821E5388E00BE1857 /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
 		CB997C4D2198109C0059E119 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		CB997C5021982E710059E119 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		CB997C54219843350059E119 /* AccountCreationConfirmedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCreationConfirmedVC.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				CB80836E219A17050067A6C5 /* SideMenuVC.swift */,
+				CB9740E821E5388E00BE1857 /* SideMenuCell.swift */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -666,6 +669,7 @@
 				CBB9F9CB2179EA830009AC69 /* AppDelegate.swift in Sources */,
 				CB808372219A171C0067A6C5 /* MainNavigatorVC.swift in Sources */,
 				CB9C5655218A287900E107BA /* Models.swift in Sources */,
+				CB9740E921E5388E00BE1857 /* SideMenuCell.swift in Sources */,
 				CB1BBD1021E2B0620018FAA0 /* UserDefaults.swift in Sources */,
 				CB9740E221E4D49300BE1857 /* DeviceCell.swift in Sources */,
 				CB997C5721986FC20059E119 /* Box.swift in Sources */,

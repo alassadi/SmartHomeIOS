@@ -20,20 +20,15 @@ class DashboardVC: UIViewController {
 
         setConstraints()
         setDatabaseConnections()
+        initTargets()
     }
 
     private func setConstraints() {
-        self.view.addSubview(self.scrollView)
-
-        self.scrollView.addSubview(self.outsideTempLabel)
-        self.scrollView.addSubview(self.insideTempLabel)
-        self.scrollView.addSubview(self.upstairsTempLabel)
-        self.scrollView.addSubview(self.alarmStatusLabel)
-        self.scrollView.addSubview(self.alarmIconLabel)
-
-        self.scrollView.snp.makeConstraints { (make) in
-            make.leading.top.trailing.bottom.equalTo(self.view)
-        }
+        self.view.addSubview(self.outsideTempLabel)
+        self.view.addSubview(self.insideTempLabel)
+        self.view.addSubview(self.upstairsTempLabel)
+        self.view.addSubview(self.alarmStatusLabel)
+        self.view.addSubview(self.alarmIconLabel)
 
         self.outsideTempLabel.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
@@ -59,12 +54,12 @@ class DashboardVC: UIViewController {
             let backgroundView = UIView()
             let titleLabel = UILabel()
 
-            self.scrollView.addSubview(backgroundView)
-            self.scrollView.addSubview(titleLabel)
+            self.view.addSubview(backgroundView)
+            self.view.addSubview(titleLabel)
 
             backgroundView.backgroundColor = .yellowish
             titleLabel.font = UIFont.italicSystemFont(ofSize: 12)
-            self.scrollView.sendSubviewToBack(backgroundView)
+            self.view.sendSubviewToBack(backgroundView)
             backgroundView.snp.makeConstraints({ (make) in
                 if label.tag == 1 {
                     make.leading.equalTo(label).offset(6)
@@ -97,14 +92,24 @@ class DashboardVC: UIViewController {
 
         self.alarmStatusLabel.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview().offset(16)
-            make.top.equalTo(upstairsTempLabel.snp.bottom).offset(40)
-            make.bottom.equalToSuperview()
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide).offset(-20)
         }
 
         self.alarmIconLabel.snp.makeConstraints { (make) in
             make.centerY.equalTo(self.alarmStatusLabel)
             make.trailing.equalTo(self.alarmStatusLabel.snp.leading).offset(-8)
         }
+    }
+
+    private func initTargets() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.onAlarmLabelPressed))
+        self.alarmStatusLabel.isUserInteractionEnabled = true
+        self.alarmStatusLabel.addGestureRecognizer(tap)
+    }
+
+    @objc func onAlarmLabelPressed(sender: UITapGestureRecognizer? = nil) {
+        self.alarmStatusLabel.text = "No ongoing alerts"
+        self.alarmIconLabel.text = "thumbs-up"
     }
 
     private func setDatabaseConnections() {
@@ -157,27 +162,19 @@ class DashboardVC: UIViewController {
                     if value == "true" {
                         self.alarmStatusLabel.text = "FIRE ALERT!"
                         self.alarmIconLabel.text = "exclamation-square"
+                        self.alarmIconLabel.textColor = .red
                     }
                 }
                 if let value = snapshot.value as? Bool {
                     if value {
                         self.alarmStatusLabel.text = "FIRE ALERT!"
                         self.alarmIconLabel.text = "exclamation-square"
+                        self.alarmIconLabel.textColor = .red
                     }
                 }
         }
 
     }
-
-    let scrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-        scrollView.isScrollEnabled = true
-        scrollView.showsHorizontalScrollIndicator = false
-        scrollView.showsVerticalScrollIndicator = false
-        scrollView.bounces = true
-        scrollView.alwaysBounceVertical = true
-        return scrollView
-    }()
 
     let outsideTempLabel: UILabel = {
         let label = UILabel()
@@ -213,7 +210,7 @@ class DashboardVC: UIViewController {
 
     let alarmIconLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: FontNames.FAPro_solid, size: 16)
+        label.font = UIFont(name: FontNames.FAPro_solid, size: 20)
         label.textColor = .blackish
         label.textAlignment = .center
         label.text = "thumbs-up"
@@ -222,10 +219,10 @@ class DashboardVC: UIViewController {
 
     let alarmStatusLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16)
-        label.textColor = UIColor.blackish.withAlphaComponent(0.8)
+        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.textColor = UIColor.blackish.withAlphaComponent(0.7)
         label.textAlignment = .center
-        label.text = "No ongoing alarms."
+        label.text = "No ongoing alarms"
         return label
     }()
 }
