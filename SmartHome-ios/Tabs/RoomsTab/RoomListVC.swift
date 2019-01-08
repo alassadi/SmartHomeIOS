@@ -18,7 +18,7 @@ class RoomListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        self.navigationController?.navigationBar.tintColor = .redish
+        self.navigationController?.navigationBar.tintColor = .blackish
 
         ref = Database.database().reference()
 

@@ -9,7 +9,13 @@
 import UIKit
 import SnapKit
 
+protocol DeviceCellDelegate {
+    func switchToggledFor(id: String, to value: String)
+}
+
 class DeviceCell: UITableViewCell {
+
+    var delegate: DeviceCellDelegate?
 
     var device: _device? {
         didSet {
@@ -42,7 +48,7 @@ class DeviceCell: UITableViewCell {
         self.iconContainer.addSubview(iconLabel)
 
         self.iconContainer.snp.makeConstraints { (make) in
-            make.height.width.equalTo(30)
+            make.height.width.equalTo(27)
             make.leading.equalToSuperview().offset(20)
             make.centerY.equalToSuperview()
         }
@@ -69,7 +75,7 @@ class DeviceCell: UITableViewCell {
     private func initUI(device: _device) {
         if let value = device.value {
             if let name = device.name {
-                self.titleLabel.text = name
+                self.titleLabel.text = name.capitalized
                 if let type = DeviceType(rawValue: name) {
                     switch type {
                     case .lampInside,.lampOutside:
@@ -141,7 +147,7 @@ class DeviceCell: UITableViewCell {
                          .temperatureInside:
                         self.onOffSwitch.isHidden = true
                         self.tempLabel.isHidden = false
-                        self.tempLabel.text = value
+                        self.tempLabel.text = "\(value)°"
                     }
                 } else {
                     print("Device name does not conform a device type.")
@@ -158,7 +164,15 @@ class DeviceCell: UITableViewCell {
     }
 
     @objc func onSwitchToggled(sender: UISwitch) {
-        
+        if let id = device?.id {
+            let boolAsString = String.init(sender.isOn)
+            self.delegate?.switchToggledFor(id: id, to: boolAsString)
+            APIUpdateDevice(deviceId: id, params: ["value": boolAsString]).execute(onSuccess: { (response) in
+                print(response)
+            }) { (error) in
+                print(error)
+            }
+        }
     }
 
     private func setForError() {
@@ -182,28 +196,29 @@ class DeviceCell: UITableViewCell {
 
     let iconContainer: UIView = {
         let view = UIView()
-        view.backgroundColor = .yellow
+        view.backgroundColor = .yellowish
         return view
     }()
 
     let iconLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.init(name: FontNames.FAPro_solid, size: 30)
-        label.textColor = .lighterBlack
+        label.textColor = .blackish
         return label
     }()
 
     let tempLabel: UILabel = {
         let label = UILabel()
         label.isHidden = true
-        label.font = UIFont.systemFont(ofSize: 20)
-        label.textColor = .redish
+        label.font = UIFont.systemFont(ofSize: 26)
+        label.textColor = .blackish
         return label
     }()
 
     let onOffSwitch: UISwitch = {
         let swtch = UISwitch()
-        swtch.onTintColor = .redish
+        swtch.tintColor = .blackish
+        swtch.onTintColor = UIColor.yellowish.withAlphaComponent(0.8)
         swtch.isHidden = true
         return swtch
     }()

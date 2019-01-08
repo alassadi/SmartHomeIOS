@@ -45,6 +45,9 @@ struct Path {
     public func devicesFor(room id: String) -> String {
         return "\(baseUrl)/rooms/codable/\(id)/"
     }
+    public func updateDevice(device id: String) -> String {
+        return "\(baseUrl)/devices/\(id)/"
+    }
 }
 
 public func configuredHeaders(additionalHeaders: [String:String]?, headers: [String:String]) -> [String:String] {

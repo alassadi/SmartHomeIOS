@@ -11,8 +11,9 @@ import UIKit
 extension UIColor {
     static let divider: UIColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.3)
     static let highlight: UIColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1.0)
-    static let lighterBlack: UIColor = UIColor(red: 52/255, green: 73/255, blue: 94/255, alpha: 1.0)
+    static let blackish: UIColor = UIColor(red: 52/255, green: 73/255, blue: 94/255, alpha: 1.0)
     static let redish: UIColor = UIColor(red: 214/255, green: 91/255, blue: 58/255, alpha: 1.0)
+    static let yellowish: UIColor = UIColor(red: 254/255, green: 226/255, blue: 56/255, alpha: 1.0)
 }
 
 extension UIViewController {

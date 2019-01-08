@@ -21,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        UITabBar.appearance().tintColor = UIColor.yellowish.withAlphaComponent(0.7)
+
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
         Database.database().isPersistenceEnabled = true

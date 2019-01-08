@@ -48,3 +48,19 @@ struct APIGetDevicesForRoom: RequestType {
                            headers: headers)
     }
 }
+
+struct APIUpdateDevice: RequestType {
+    typealias ResponseType = [String:String]
+    private let headers = defaultHeaders
+    public let deviceId: String
+    public let params: [String:Any]
+
+    var data: RequestData {
+        return RequestData(path: path.updateDevice(device: deviceId),
+                           method: .POST,
+                           params: params,
+                           headers: headers)
+    }
+}
+
+

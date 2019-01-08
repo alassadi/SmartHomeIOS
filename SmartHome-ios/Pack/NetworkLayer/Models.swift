@@ -42,6 +42,8 @@ struct _device: Codable {
         name = try container.decode(String.self, forKey: .name)
         if let data = try? container.decode(Int.self, forKey: .value) {
             value = String(data)
+        } else if let data = try? container.decode(Bool.self, forKey: .value) {
+            value = String(data)
         } else {
             value = try container.decode(String.self, forKey: .value)
         }

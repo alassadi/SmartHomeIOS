@@ -73,8 +73,20 @@ extension RoomVC: UITableViewDataSource {
         let cell: DeviceCell = {
             let cell = tableView.dequeueReusableCell(withIdentifier: "deviceCell") as! DeviceCell
             cell.device = deviceList[indexPath.row]
+            cell.delegate = self
             return cell
         }()
         return cell
+    }
+}
+
+extension RoomVC: DeviceCellDelegate {
+    func switchToggledFor(id: String, to value: String) {
+        for (index, device) in self.deviceList.enumerated() {
+            if device.id == id {
+                self.deviceList[index].value = value
+            }
+        }
+        self.tableView.reloadData()
     }
 }
