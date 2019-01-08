@@ -19,7 +19,10 @@ class RoomVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        
+
+        NotificationCenter.default.addObserver(self, selector: #selector(getDevices),
+                                               name: NSNotification.Name(rawValue: NotificationName.DEVICE_UPDATED), object: nil)
+
         ref = Database.database().reference()
 
         getDevices()
@@ -39,7 +42,7 @@ class RoomVC: UIViewController {
         }
     }
 
-    private func getDevices() {
+    @objc private func getDevices() {
         APIGetDevicesForRoom(roomId: self.roomId).execute(onSuccess: { (response) in
             self.deviceList = response
             self.tableView.reloadData()

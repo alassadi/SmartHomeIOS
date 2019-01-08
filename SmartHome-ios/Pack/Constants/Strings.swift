@@ -10,6 +10,7 @@ import Foundation
 
 struct NotificationName {
     static let FCM_TOKEN_RECEIVED = "FCM_TOKEN_RECEIVED"
+    static let DEVICE_UPDATED = "DEVICE_UPDATED"
 }
 
 enum DeviceType: String {
