@@ -62,7 +62,6 @@ public struct URLSessionNetworkDispatcher: NetworkDispatcher {
                     return
                 }
             })
-            print(headers)
         }
 
         dispatchGroup.notify(queue: .main) {
@@ -78,9 +77,6 @@ public struct URLSessionNetworkDispatcher: NetworkDispatcher {
                     return
                 }
                 if let httpResponse = response as? HTTPURLResponse {
-
-                    print(httpResponse.statusCode)
-
                     switch httpResponse.statusCode {
                     case 200...299:
                         onSuccess(_data)

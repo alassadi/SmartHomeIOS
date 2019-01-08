@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import KeychainAccess
 
 class LoginVC: UIViewController {
     override func viewDidLoad() {
@@ -69,11 +70,19 @@ class LoginVC: UIViewController {
                     let mainVC = MainVC()
                     UserDefaults.standard.setAppUserId(id: auth.user.uid)
 
-                    APIRegisterUnit(params: ["fcm_token":UserDefaults.standard.getFCMToken() ?? ""])
-                        .execute(onSuccess: { (response) in
-                    }, onError: { (error) in
-                        print(error)
-                    })
+                    do {
+                        if let fcmToken = try Keychain(service: "com.charlie.SmartHome-ios-test").get("fcm_token") {
+                            APIRegisterUnit(params: ["fcm_token":fcmToken])
+                                .execute(onSuccess: { (response) in
+                                }, onError: { (error) in
+                                    print(error)
+                                })
+                        } else {
+                            print("fcm_token was nil in keychain.")
+                        }
+                    } catch {
+                        print("Could not read fcm_token from keychain.")
+                    }
 
                     self.present(mainVC, animated: true)
                 }

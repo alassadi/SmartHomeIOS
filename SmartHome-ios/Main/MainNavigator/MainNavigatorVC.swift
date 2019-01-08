@@ -23,8 +23,8 @@ class MainTabBarVC: UITabBarController {
         return vc
     }()
 
-    let roomsVC: RoomsVC = {
-        let vc = RoomsVC()
+    let roomsVC: RoomListVC = {
+        let vc = RoomListVC()
         vc.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
         vc.title = "Rooms" //Todo: Localize
         return vc

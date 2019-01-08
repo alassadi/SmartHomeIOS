@@ -17,16 +17,33 @@ class SideMenuVC: UIViewController {
         self.view.backgroundColor = .white
 
         self.setConstraints()
+        self.initUI()
         self.initTargets()
     }
 
     private func setConstraints() {
-        self.view.addSubview(logOutButton)
+        self.view.addSubview(self.email)
+        self.view.addSubview(self.logOutButton)
+        self.view.addSubview(self.loggedInAs)
+
+        loggedInAs.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(40)
+            make.leading.equalToSuperview().offset(26)
+        }
+
+        email.snp.makeConstraints { (make) in
+            make.top.equalTo(loggedInAs.snp.bottom).offset(8)
+            make.leading.equalTo(loggedInAs.snp.leading)
+        }
 
         logOutButton.snp.makeConstraints { (make) in
-            make.bottom.equalToSuperview().offset(-16)
-            make.leading.equalToSuperview().offset(16)
+            make.bottom.equalToSuperview().offset(-26)
+            make.leading.equalToSuperview().offset(26)
         }
+    }
+
+    private func initUI() {
+        self.email.text = Auth.auth().currentUser?.email
     }
 
     private func initTargets() {
@@ -44,6 +61,21 @@ class SideMenuVC: UIViewController {
         }
     }
 
+    let loggedInAs: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 16)
+        label.text = "Logged in as: "
+        return label
+    }()
+
+    let email: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 16)
+        return label
+    }()
+
     let logOutButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -53,33 +85,3 @@ class SideMenuVC: UIViewController {
         return button
     }()
 }
-
-//UserDefaults.standard.setIsLoggedIn(value: false)
-//UserDefaults.standard.setLoggedInUser(username: "")
-//
-//guard let instance = instance else {
-//    let controller = UIStoryboard(name: "Sign", bundle: nil).instantiateViewController(withIdentifier: "SignInVC") as! SignInVC
-//    DispatchQueue.main.async {
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        appDelegate.window?.rootViewController = controller
-//    }
-//    CoreDataManager.shared.initCoreDataPersistanceContainer()
-//    Log.i("instance is nil")
-//    return
-//}
-//
-//if let deviceId = UIDevice.current.identifierForVendor?.uuidString {
-//    DeleteFCMTokenFromRemoteDatabase(deviceId: deviceId).execute(onSuccess: { (response) in
-//        Log.s("Delete FCM token from remote DB.")
-//    }) { (error, _error) in
-//        Log.w(error)
-//    }
-//}
-//
-//let vc = UIApplication.shared.keyWindow?.rootViewController
-//if vc is SignInVC {
-//    instance.performSegue(withIdentifier: "unwindToSign", sender: nil)
-//    CoreDataManager.shared.initCoreDataPersistanceContainer()
-//} else {
-//    SignInHelper.performLoginCheck()
-//}

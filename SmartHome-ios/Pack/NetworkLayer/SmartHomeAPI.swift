@@ -36,3 +36,15 @@ struct APIRegisterUnit: RequestType {
                            headers: headers)
     }
 }
+
+struct APIGetDevicesForRoom: RequestType {
+    typealias ResponseType = [_device]
+    private let headers = defaultHeaders
+    public let roomId: String
+
+    var data: RequestData {
+        return RequestData(path: path.devicesFor(room: roomId),
+                           method: .GET,
+                           headers: headers)
+    }
+}

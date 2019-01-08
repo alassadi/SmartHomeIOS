@@ -11,8 +11,9 @@
 		26726F8B5F84A344EE20D682 /* Pods_SmartHome_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E86BE15E847DCE890EDDCBA /* Pods_SmartHome_ios.framework */; };
 		A1FA6DCEAAB3E86737459555 /* Pods_SmartHome_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0519320208578FF660DEF5FD /* Pods_SmartHome_iosTests.framework */; };
 		CB1BBD0B21E24FA70018FAA0 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1BBD0A21E24FA70018FAA0 /* DashboardVC.swift */; };
-		CB1BBD0D21E24FD00018FAA0 /* RoomsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1BBD0C21E24FD00018FAA0 /* RoomsVC.swift */; };
+		CB1BBD0D21E24FD00018FAA0 /* RoomListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1BBD0C21E24FD00018FAA0 /* RoomListVC.swift */; };
 		CB1BBD1021E2B0620018FAA0 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1BBD0F21E2B0620018FAA0 /* UserDefaults.swift */; };
+		CB3E5EC921E3E23700F4DCD2 /* RoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3E5EC821E3E23700F4DCD2 /* RoomVC.swift */; };
 		CB46B9252196037B00B38E82 /* UIGroup+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB46B9242196037B00B38E82 /* UIGroup+Components.swift */; };
 		CB46B92721962CBE00B38E82 /* SignUp2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB46B92621962CBE00B38E82 /* SignUp2VC.swift */; };
 		CB7C7FC9218A5D4600C64E95 /* UIGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7C7FC8218A5D4600C64E95 /* UIGroup.swift */; };
@@ -21,6 +22,8 @@
 		CB808372219A171C0067A6C5 /* MainNavigatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB808371219A171C0067A6C5 /* MainNavigatorVC.swift */; };
 		CB811ABB21971E27009BFC3A /* SignUpVC+FormScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB811ABA21971E27009BFC3A /* SignUpVC+FormScroll.swift */; };
 		CB811ABF21976756009BFC3A /* SignUp2VC+FormScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB811ABE21976756009BFC3A /* SignUp2VC+FormScroll.swift */; };
+		CB9740E221E4D49300BE1857 /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9740E121E4D49300BE1857 /* DeviceCell.swift */; };
+		CB9740E721E4DB2A00BE1857 /* Font Awesome 5 Pro-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB9740E621E4DB2A00BE1857 /* Font Awesome 5 Pro-Solid-900.otf */; };
 		CB997C4E2198109C0059E119 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB997C4D2198109C0059E119 /* Regex.swift */; };
 		CB997C5121982E710059E119 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB997C5021982E710059E119 /* Strings.swift */; };
 		CB997C55219843350059E119 /* AccountCreationConfirmedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB997C54219843350059E119 /* AccountCreationConfirmedVC.swift */; };
@@ -75,8 +78,9 @@
 		B6138E6881B56ECAA82E3E1A /* Pods-SmartHome-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHome-iosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartHome-iosUITests/Pods-SmartHome-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BAC54E85D922C2C64F21BCA6 /* Pods-SmartHome-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHome-iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartHome-iosUITests/Pods-SmartHome-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB1BBD0A21E24FA70018FAA0 /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
-		CB1BBD0C21E24FD00018FAA0 /* RoomsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsVC.swift; sourceTree = "<group>"; };
+		CB1BBD0C21E24FD00018FAA0 /* RoomListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListVC.swift; sourceTree = "<group>"; };
 		CB1BBD0F21E2B0620018FAA0 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		CB3E5EC821E3E23700F4DCD2 /* RoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomVC.swift; sourceTree = "<group>"; };
 		CB46B9242196037B00B38E82 /* UIGroup+Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIGroup+Components.swift"; sourceTree = "<group>"; };
 		CB46B92621962CBE00B38E82 /* SignUp2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp2VC.swift; sourceTree = "<group>"; };
 		CB7C7FC8218A5D4600C64E95 /* UIGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGroup.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 		CB808371219A171C0067A6C5 /* MainNavigatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigatorVC.swift; sourceTree = "<group>"; };
 		CB811ABA21971E27009BFC3A /* SignUpVC+FormScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpVC+FormScroll.swift"; sourceTree = "<group>"; };
 		CB811ABE21976756009BFC3A /* SignUp2VC+FormScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp2VC+FormScroll.swift"; sourceTree = "<group>"; };
+		CB9740E121E4D49300BE1857 /* DeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
+		CB9740E621E4DB2A00BE1857 /* Font Awesome 5 Pro-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Pro-Solid-900.otf"; sourceTree = "<group>"; };
 		CB997C4D2198109C0059E119 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		CB997C5021982E710059E119 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		CB997C54219843350059E119 /* AccountCreationConfirmedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCreationConfirmedVC.swift; sourceTree = "<group>"; };
@@ -180,7 +186,9 @@
 		CB1BBD0921E24F8A0018FAA0 /* RoomsTab */ = {
 			isa = PBXGroup;
 			children = (
-				CB1BBD0C21E24FD00018FAA0 /* RoomsVC.swift */,
+				CB1BBD0C21E24FD00018FAA0 /* RoomListVC.swift */,
+				CB3E5EC821E3E23700F4DCD2 /* RoomVC.swift */,
+				CB9740E121E4D49300BE1857 /* DeviceCell.swift */,
 			);
 			path = RoomsTab;
 			sourceTree = "<group>";
@@ -228,6 +236,14 @@
 			path = Step2;
 			sourceTree = "<group>";
 		};
+		CB9740E321E4DA3300BE1857 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CB9740E621E4DB2A00BE1857 /* Font Awesome 5 Pro-Solid-900.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		CB997C4C219810760059E119 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +264,7 @@
 		CB997C522198357C0059E119 /* Pack */ = {
 			isa = PBXGroup;
 			children = (
+				CB9740E321E4DA3300BE1857 /* Fonts */,
 				CB9C564B218A268200E107BA /* Extensions */,
 				CB997C4C219810760059E119 /* Utilities */,
 				CB7FCE61217E2C90001042A0 /* UIComponents */,
@@ -510,6 +527,7 @@
 			files = (
 				CBB9F9D82179EA840009AC69 /* LaunchScreen.storyboard in Resources */,
 				CBB9F9D52179EA840009AC69 /* Assets.xcassets in Resources */,
+				CB9740E721E4DB2A00BE1857 /* Font Awesome 5 Pro-Solid-900.otf in Resources */,
 				CBA6EEEF21946C8A00FF963E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,6 +558,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SmartHome-ios/Pods-SmartHome-ios-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -549,6 +568,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -621,7 +641,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBA6EEF42194AFB000FF963E /* FormTextFieldView.swift in Sources */,
-				CB1BBD0D21E24FD00018FAA0 /* RoomsVC.swift in Sources */,
+				CB1BBD0D21E24FD00018FAA0 /* RoomListVC.swift in Sources */,
 				CB46B92721962CBE00B38E82 /* SignUp2VC.swift in Sources */,
 				CB9C5653218A272900E107BA /* Dispatcher.swift in Sources */,
 				CB9C564F218A26D200E107BA /* SmartHomeAPI.swift in Sources */,
@@ -647,8 +667,10 @@
 				CB808372219A171C0067A6C5 /* MainNavigatorVC.swift in Sources */,
 				CB9C5655218A287900E107BA /* Models.swift in Sources */,
 				CB1BBD1021E2B0620018FAA0 /* UserDefaults.swift in Sources */,
+				CB9740E221E4D49300BE1857 /* DeviceCell.swift in Sources */,
 				CB997C5721986FC20059E119 /* Box.swift in Sources */,
 				CB997C4E2198109C0059E119 /* Regex.swift in Sources */,
+				CB3E5EC921E3E23700F4DCD2 /* RoomVC.swift in Sources */,
 				CB997C5121982E710059E119 /* Strings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

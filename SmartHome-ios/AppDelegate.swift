@@ -12,6 +12,7 @@ import FirebaseCore
 import FirebaseMessaging
 import FirebaseDatabase
 import UserNotifications
+import KeychainAccess
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
         Database.database().isPersistenceEnabled = true
@@ -124,7 +124,11 @@ extension AppDelegate : MessagingDelegate {
     // [START refresh_token]
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
         print("Firebase registration token: \(fcmToken)")
-        UserDefaults.standard.setFCMToken(token: fcmToken)
+        do {
+            try Keychain(service: "com.charlie.SmartHome-ios-test").set(fcmToken, key: "fcm_token")
+        } catch {
+            print("Could not set fcm_token for keychain")
+        }
         // TODO: If necessary send token to application server.
         // Note: This callback is fired at each app startup and whenever a new token is generated.
     }

@@ -48,6 +48,12 @@ class MainVC: UIViewController {
         return view
     }()
 
+    let shadeView: UIView = { //TODO: Shade
+        let view = UIView()
+        view.backgroundColor = .black
+        return view
+    }()
+
     let sideMenuVC = SideMenuVC()
     let mainTabBarVC = MainTabBarVC()
 }

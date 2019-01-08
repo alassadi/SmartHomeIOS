@@ -8,14 +8,6 @@
 
 import Foundation
 
-struct friend: Codable {
-    var _id: String?
-    var name: String?
-    var surname: String?
-    var description: String?
-    var __v: Int?
-}
-
 struct _user: Codable {
     let id: Int32?
     let email: String?
@@ -30,9 +22,28 @@ struct _user: Codable {
     var gender: String?
 }
 
-struct _device_status: Codable {
-    let enabled: Bool?
-    let name: String?
+struct _device: Codable {
+    let id: String?
     let room_id: String?
-    let version: Double?
+    let name: String?
+    var value: String?
+
+    init(id: String? = nil, room_id: String? = nil, name: String? = nil, value: String?) {
+        self.id = id
+        self.room_id = room_id
+        self.name = name
+        self.value = value
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decode(String.self, forKey: .id)
+        room_id = try container.decode(String.self, forKey: .room_id)
+        name = try container.decode(String.self, forKey: .name)
+        if let data = try? container.decode(Int.self, forKey: .value) {
+            value = String(data)
+        } else {
+            value = try container.decode(String.self, forKey: .value)
+        }
+    }
 }
