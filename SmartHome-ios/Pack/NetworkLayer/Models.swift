@@ -49,3 +49,8 @@ struct _device: Codable {
         }
     }
 }
+
+struct _room: Codable {
+    let room_name: String
+    let room_number: Int
+}

@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseMessaging
 
 class SideMenuVC: UIViewController {
 
@@ -30,14 +31,15 @@ class SideMenuVC: UIViewController {
         self.view.addSubview(self.iconLabel)
         self.view.addSubview(self.brand)
 
-        self.iconLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(self.view.safeAreaLayoutGuide).offset(30)
+        self.backgroundView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.view.safeAreaLayoutGuide).offset(UIScreen.main.bounds.height*0.08)
             make.centerX.equalToSuperview()
+            make.width.height.equalTo(80)
         }
 
-        self.backgroundView.snp.makeConstraints { (make) in
-            make.center.equalTo(self.iconLabel)
-            make.width.height.equalTo(80)
+        self.iconLabel.snp.makeConstraints { (make) in
+            make.center.equalTo(self.backgroundView)
+            make.centerX.equalToSuperview()
         }
 
         self.brand.snp.makeConstraints { (make) in
@@ -74,6 +76,9 @@ class SideMenuVC: UIViewController {
     private func onLogOutPressed() {
         do {
             try Auth.auth().signOut()
+            Messaging.messaging().unsubscribe(fromTopic: "deviceUpdate") { error in
+                print("unscribed from topic deviceUpdate")
+            }
             UserDefaults.standard.reset()
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.window?.rootViewController = LoginVC()

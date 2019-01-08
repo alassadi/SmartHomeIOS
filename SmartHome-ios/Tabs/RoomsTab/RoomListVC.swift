@@ -38,7 +38,6 @@ class RoomListVC: UIViewController {
 
         ref.child("Rooms").observe(.value) { (snapshot) in
             if let values = snapshot.value as? [String:Any] {
-                print(values)
                 self.roomList.removeAll()
                 self.roomList = values
                 self.tableView.reloadData()
@@ -56,6 +55,14 @@ extension RoomListVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let roomId = Array(self.roomList.keys)[indexPath.row]
         let roomVC = RoomVC()
+
+        switch roomId {
+        case "K7F2O2YJLAWJxy4t9DI9": roomVC.title = "Inside"
+        case "x80HetypgBJIrdJc36gh": roomVC.title = "Upstairs" //WOW..
+        case "xXKPpHKTbMWCXDluthqz": roomVC.title = "Outside"
+        default: roomVC.title = "Room"
+        }
+
         roomVC.roomId = roomId
         self.navigationController?.pushViewController(roomVC, animated: true)
     }
@@ -68,6 +75,7 @@ extension RoomListVC: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell.init(style: .default, reuseIdentifier: "cell")
+        cell.selectionStyle = .none
         if let roomDictionary = self.roomList[Array(self.roomList.keys)[indexPath.row]] as? [String:Any] {
             if let roomName = roomDictionary["room_name"] as? String {
                 cell.textLabel?.text = roomName.capitalized

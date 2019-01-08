@@ -139,7 +139,7 @@ class DeviceCell: UITableViewCell {
                         self.onOffSwitch.isHidden = false
                         self.tempLabel.isHidden = true
                         if let bool = Bool(value) {
-                            self.onOffSwitch.isOn = bool
+                            self.onOffSwitch.setOn(bool, animated: true)
                         } else {
                             self.setForError()
                         }

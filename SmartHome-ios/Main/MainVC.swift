@@ -8,15 +8,28 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseMessaging
 import SnapKit
 
 class MainVC: UIViewController {
 
     override func viewDidLoad() {
         self.view.backgroundColor = .white
+
+        Messaging.messaging().subscribe(toTopic: "deviceUpdate") { error in
+            print("Subscribed to device update")
+        }
+
+        self.scrollView.delegate = self
+
+        setConstraints()
+    }
+
+    private func setConstraints() {
         self.view.addSubview(self.scrollView)
         self.scrollView.addSubview(self.sideMenuVC.view)
         self.scrollView.addSubview(self.mainTabBarVC.view)
+        self.scrollView.addSubview(self.shadeView)
 
         self.sideMenuVC.didMove(toParent: self)
         self.mainTabBarVC.didMove(toParent: self)
@@ -36,6 +49,15 @@ class MainVC: UIViewController {
             make.leading.equalTo(self.sideMenuVC.view.snp.trailing)
             make.width.equalTo(UIScreen.main.bounds.width)
         }
+
+        self.shadeView.snp.makeConstraints { (make) in
+            make.leading.top.trailing.bottom.equalTo(self.mainTabBarVC.view)
+        }
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        scrollView.setContentOffset(CGPoint(x:UIScreen.main.bounds.width*0.8, y:0), animated: false)
     }
 
     let scrollView: UIScrollView = {
@@ -51,9 +73,21 @@ class MainVC: UIViewController {
     let shadeView: UIView = { //TODO: Shade
         let view = UIView()
         view.backgroundColor = .black
+        view.alpha = 0
         return view
     }()
 
     let sideMenuVC = SideMenuVC()
     let mainTabBarVC = MainTabBarVC()
+}
+
+extension MainVC: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let sideMenuWidth = UIScreen.main.bounds.width*0.8
+        let xValue = ["shadeValue":scrollView.contentOffset.x/sideMenuWidth]
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "DidScroll"),
+                                        object: nil,
+                                        userInfo: xValue)
+        self.shadeView.alpha = -scrollView.contentOffset.x/(sideMenuWidth*2) + 1/2
+    }
 }

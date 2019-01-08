@@ -161,10 +161,8 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         print("extension: \(userInfo)")
         //Temporary hack for cancelling alarms on ipad
 
-
         // Change this to your preferred presentation option
         completionHandler([])
-
     }
 }
 
