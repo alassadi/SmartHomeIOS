@@ -42,7 +42,7 @@ class EmailPasswordStack: UIStackView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        view.backgroundColor = .black
+        view.backgroundColor = .blackish
         view.alpha = 0.3
         return view
     }()
@@ -59,10 +59,10 @@ class EmailPasswordStack: UIStackView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        view.backgroundColor = .black
+        view.backgroundColor = .blackish
         view.alpha = 0.3
         return view
     }()
     
-    let buttonLogin = RoundedButtonView(title: "Log in", backgroundColor: .red) //Localize
+    let buttonLogin = RoundedButtonView(title: "Log in", backgroundColor: .redish) //Localize
 }

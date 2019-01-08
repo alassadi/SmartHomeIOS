@@ -88,7 +88,7 @@ class CreateAccountFormView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Create an account" //Localize
         label.font = UIFont.boldSystemFont(ofSize: 16.0)
-        label.textColor = .black
+        label.textColor = .blackish
         label.textAlignment = .center
         return label
     }()
@@ -102,12 +102,12 @@ class CreateAccountFormView: UIView {
         return stack
     }()
 
-    let nameField = FormTextFieldView.init(placeholder: "Name", icon: #imageLiteral(resourceName: "person-solid"), iconSize: 20, tintColor: .red) //Localize
-    let surnameField = FormTextFieldView.init(placeholder: "Surname", icon: nil, iconSize: 20, tintColor: .red) //Localize
-    let emailField = FormTextFieldView.init(type: .email, placeholder: "Email", icon: #imageLiteral(resourceName: "email-solid"), iconSize: 20, tintColor: .red) //Localize
-    let phoneField = FormTextFieldView.init(type: .phone, placeholder: "Phone", icon: #imageLiteral(resourceName: "phone-solid"), iconSize: 20, tintColor: .red) //Localize
-    let passwordField = FormTextFieldView.init(type: .password, placeholder: "Password", icon: #imageLiteral(resourceName: "lock-solid"), iconSize: 20, tintColor: .red) //Localize
-    let confirmPasswordField = FormTextFieldView.init(type: .password, placeholder: "Confirm password", icon: nil, iconSize: 20, tintColor: .red) //Localize
+    let nameField = FormTextFieldView.init(placeholder: "Name", icon: #imageLiteral(resourceName: "person-solid"), iconSize: 20, tintColor: .redish) //Localize
+    let surnameField = FormTextFieldView.init(placeholder: "Surname", icon: nil, iconSize: 20, tintColor: .redish) //Localize
+    let emailField = FormTextFieldView.init(type: .email, placeholder: "Email", icon: #imageLiteral(resourceName: "email-solid"), iconSize: 20, tintColor: .redish) //Localize
+    let phoneField = FormTextFieldView.init(type: .phone, placeholder: "Phone", icon: #imageLiteral(resourceName: "phone-solid"), iconSize: 20, tintColor: .redish) //Localize
+    let passwordField = FormTextFieldView.init(type: .password, placeholder: "Password", icon: #imageLiteral(resourceName: "lock-solid"), iconSize: 20, tintColor: .redish) //Localize
+    let confirmPasswordField = FormTextFieldView.init(type: .password, placeholder: "Confirm password", icon: nil, iconSize: 20, tintColor: .redish) //Localize
 
-    let continueButton = RoundedButtonView(title: "Continue", backgroundColor: .red) //Localize
+    let continueButton = RoundedButtonView(title: "Continue", backgroundColor: .redish) //Localize
 }

@@ -12,7 +12,7 @@ class SignUpVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        self.setButtonsForPlainNavigationBarStyle(with: .red)
+        self.setButtonsForPlainNavigationBarStyle(with: .redish)
         self.setHideKeyboardOnTap()
 
         initUI()
@@ -63,7 +63,7 @@ extension SignUpVC {
             for fieldView in fieldViews {
                 if !fieldView.hasValidInput() {
                     fieldView.bottomLine.alpha = 1.0
-                    fieldView.bottomLine.backgroundColor = .red
+                    fieldView.bottomLine.backgroundColor = .redish
                     return false
                 }
             }
@@ -74,7 +74,7 @@ extension SignUpVC {
         //Should not be located here. Try to keep rule logic outside of VC
         if self.createAccountForm.passwordField.textField.text
             != self.createAccountForm.confirmPasswordField.textField.text {
-            self.createAccountForm.confirmPasswordField.bottomLine.backgroundColor = .red
+            self.createAccountForm.confirmPasswordField.bottomLine.backgroundColor = .redish
             self.presentAlert(title: "Error", message: "Passwords do not match!")//Localize
             return false
         }

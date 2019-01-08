@@ -118,7 +118,7 @@ class LoginVC: UIViewController {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Create new account", for: .normal) //Localize
-        button.setTitleColor(.red, for: .normal)
+        button.setTitleColor(.redish, for: .normal)
         button.isEnabled = true
         return button
     }()

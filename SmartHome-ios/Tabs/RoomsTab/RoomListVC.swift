@@ -70,7 +70,8 @@ extension RoomListVC: UITableViewDataSource {
         let cell = UITableViewCell.init(style: .default, reuseIdentifier: "cell")
         if let roomDictionary = self.roomList[Array(self.roomList.keys)[indexPath.row]] as? [String:Any] {
             if let roomName = roomDictionary["room_name"] as? String {
-                cell.textLabel?.text = roomName
+                cell.textLabel?.text = roomName.capitalized
+                cell.textLabel?.textColor = .redish
             }
         }
         return cell
