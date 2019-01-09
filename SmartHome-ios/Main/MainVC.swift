@@ -13,6 +13,8 @@ import SnapKit
 
 class MainVC: UIViewController {
 
+    static var sideMenuOpen = Box<Bool>.init(false)
+
     override func viewDidLoad() {
         self.view.backgroundColor = .white
 
@@ -21,6 +23,14 @@ class MainVC: UIViewController {
         }
 
         self.scrollView.delegate = self
+
+        MainVC.sideMenuOpen.bind { (isOpen) in
+            if isOpen {
+                self.scrollView.setContentOffset(CGPoint(x: 0.0, y: 0.0), animated: true)
+            } else {
+                self.scrollView.setContentOffset(CGPoint(x:UIScreen.main.bounds.width*0.8, y:0), animated: true)
+            }
+        }
 
         setConstraints()
     }
@@ -57,7 +67,7 @@ class MainVC: UIViewController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        scrollView.setContentOffset(CGPoint(x:UIScreen.main.bounds.width*0.8, y:0), animated: false)
+        self.scrollView.setContentOffset(CGPoint(x:UIScreen.main.bounds.width*0.8, y:0), animated: false)
     }
 
     let scrollView: UIScrollView = {

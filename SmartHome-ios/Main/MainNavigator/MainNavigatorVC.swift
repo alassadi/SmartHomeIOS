@@ -10,10 +10,17 @@ import UIKit
 
 class MainTabBarVC: UITabBarController {
 
+    static var selectedIndex = Box<Int>.init(0)
+
     override func viewDidLoad() {
         self.viewControllers = [self.dashboardVC, self.roomsVC].map({
             UINavigationController(rootViewController: $0)
         })
+
+        MainTabBarVC.selectedIndex.bind { (index) in
+            print("testes")
+            self.selectedIndex = index
+        }
     }
 
     let dashboardVC: DashboardVC = {

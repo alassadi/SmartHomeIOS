@@ -140,9 +140,11 @@ extension SideMenuVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch optionList[indexPath.row] {
         case "Dashboard":
-            print("dash")
+            MainTabBarVC.selectedIndex.value = 0
+            MainVC.sideMenuOpen.value = false
         case "Rooms":
-            print("dsfaf")
+            MainTabBarVC.selectedIndex.value = 1
+            MainVC.sideMenuOpen.value = false
         case "Log out":
             self.onLogOutPressed()
         default:
