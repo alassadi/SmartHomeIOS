@@ -32,6 +32,8 @@ class MainVC: UIViewController {
             }
         }
 
+        self.sideMenuVC.delegate = self
+
         setConstraints()
     }
 
@@ -62,6 +64,20 @@ class MainVC: UIViewController {
 
         self.shadeView.snp.makeConstraints { (make) in
             make.leading.top.trailing.bottom.equalTo(self.mainTabBarVC.view)
+        }
+    }
+
+    private func onLogOutPressed() {
+        do {
+            try Auth.auth().signOut()
+            Messaging.messaging().unsubscribe(fromTopic: "deviceUpdate") { error in
+                print("unscribed from topic deviceUpdate")
+            }
+            UserDefaults.standard.reset()
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = LoginVC()
+        } catch {
+            print("Couldn't log out")
         }
     }
 
@@ -99,5 +115,26 @@ extension MainVC: UIScrollViewDelegate {
                                         object: nil,
                                         userInfo: xValue)
         self.shadeView.alpha = -scrollView.contentOffset.x/(sideMenuWidth*2) + 1/2
+    }
+}
+
+extension MainVC: SideMenuVCDelegate {
+    func sideMenuVC(didSelect rowAt: Int) {
+        switch rowAt {
+        case 0:
+            MainTabBarVC.selectedIndex.value = 0
+            MainVC.sideMenuOpen.value = false
+        case 1:
+            MainTabBarVC.selectedIndex.value = 1
+            MainVC.sideMenuOpen.value = false
+        case 2:
+            let aboutVC = UINavigationController(rootViewController: AboutVC())
+            self.present(aboutVC, animated: true)
+            MainVC.sideMenuOpen.value = true
+        case 3:
+            self.onLogOutPressed()
+        default:
+            print("Something went horribly wrong.")
+        }
     }
 }

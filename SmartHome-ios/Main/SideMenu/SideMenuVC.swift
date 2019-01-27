@@ -10,9 +10,14 @@ import UIKit
 import FirebaseAuth
 import FirebaseMessaging
 
+protocol SideMenuVCDelegate {
+    func sideMenuVC(didSelect rowAt: Int)
+}
+
 class SideMenuVC: UIViewController {
 
-    let optionList = ["Dashboard", "Rooms", "Log out", "About"]
+    var delegate: SideMenuVCDelegate?
+    let optionList = ["Dashboard", "Rooms", "About", "Log out"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,20 +78,6 @@ class SideMenuVC: UIViewController {
         self.email.text = Auth.auth().currentUser?.email
     }
 
-    private func onLogOutPressed() {
-        do {
-            try Auth.auth().signOut()
-            Messaging.messaging().unsubscribe(fromTopic: "deviceUpdate") { error in
-                print("unscribed from topic deviceUpdate")
-            }
-            UserDefaults.standard.reset()
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.window?.rootViewController = LoginVC()
-        } catch {
-            print("Couldn't log out")
-        }
-    }
-
     let iconLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.init(name: FontNames.FAPro_solid, size: 60)
@@ -138,18 +129,7 @@ extension SideMenuVC: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch optionList[indexPath.row] {
-        case "Dashboard":
-            MainTabBarVC.selectedIndex.value = 0
-            MainVC.sideMenuOpen.value = false
-        case "Rooms":
-            MainTabBarVC.selectedIndex.value = 1
-            MainVC.sideMenuOpen.value = false
-        case "Log out":
-            self.onLogOutPressed()
-        default:
-            print("Something went horribly wrong.")
-        }
+        self.delegate?.sideMenuVC(didSelect: indexPath.row)
     }
 }
 

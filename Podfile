@@ -12,6 +12,7 @@ target 'SmartHome-ios' do
   pod 'Firebase/Database'
   pod 'SnapKit'
   pod 'KeychainAccess'
+  pod 'VTAcknowledgementsViewController'
 
   target 'SmartHome-iosTests' do
     inherit! :search_paths

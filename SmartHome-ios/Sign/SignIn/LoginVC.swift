@@ -65,7 +65,8 @@ class LoginVC: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password) {
                 (auth, error) in
                 if let error = error {
-                    print(error)
+                    self.presentAlert(title: "Error", message: error.localizedDescription, handler: nil)
+                    sender.setAsLoading(false)
                 }
                 if let auth = auth {
                     let mainVC = MainVC()

@@ -16,6 +16,8 @@
 		CB3E5EC921E3E23700F4DCD2 /* RoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3E5EC821E3E23700F4DCD2 /* RoomVC.swift */; };
 		CB46B9252196037B00B38E82 /* UIGroup+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB46B9242196037B00B38E82 /* UIGroup+Components.swift */; };
 		CB46B92721962CBE00B38E82 /* SignUp2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB46B92621962CBE00B38E82 /* SignUp2VC.swift */; };
+		CB7AFE1221FDBFF000F083D4 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7AFE1121FDBFF000F083D4 /* AboutVC.swift */; };
+		CB7AFE1821FDCE8700F083D4 /* Pods-SmartHome-ios-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB7AFE1721FDCE8700F083D4 /* Pods-SmartHome-ios-acknowledgements.plist */; };
 		CB7C7FC9218A5D4600C64E95 /* UIGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7C7FC8218A5D4600C64E95 /* UIGroup.swift */; };
 		CB7FCE63217E2CB1001042A0 /* RoundedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FCE62217E2CB1001042A0 /* RoundedButtonView.swift */; };
 		CB80836F219A17050067A6C5 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB80836E219A17050067A6C5 /* SideMenuVC.swift */; };
@@ -84,6 +86,8 @@
 		CB3E5EC821E3E23700F4DCD2 /* RoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomVC.swift; sourceTree = "<group>"; };
 		CB46B9242196037B00B38E82 /* UIGroup+Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIGroup+Components.swift"; sourceTree = "<group>"; };
 		CB46B92621962CBE00B38E82 /* SignUp2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp2VC.swift; sourceTree = "<group>"; };
+		CB7AFE1121FDBFF000F083D4 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		CB7AFE1721FDCE8700F083D4 /* Pods-SmartHome-ios-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-SmartHome-ios-acknowledgements.plist"; path = "Pods/Target Support Files/Pods-SmartHome-ios/Pods-SmartHome-ios-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
 		CB7C7FC8218A5D4600C64E95 /* UIGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGroup.swift; sourceTree = "<group>"; };
 		CB7FCE62217E2CB1001042A0 /* RoundedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonView.swift; sourceTree = "<group>"; };
 		CB80836E219A17050067A6C5 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
@@ -193,6 +197,14 @@
 				CB9740E121E4D49300BE1857 /* DeviceCell.swift */,
 			);
 			path = RoomsTab;
+			sourceTree = "<group>";
+		};
+		CB7AFE1021FDBFDB00F083D4 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				CB7AFE1121FDBFF000F083D4 /* AboutVC.swift */,
+			);
+			path = About;
 			sourceTree = "<group>";
 		};
 		CB7FCE61217E2C90001042A0 /* UIComponents */ = {
@@ -364,6 +376,7 @@
 			children = (
 				CBD43300217E816100CE9C44 /* Sign */,
 				CB997C58219876040059E119 /* Main */,
+				CB7AFE1021FDBFDB00F083D4 /* About */,
 				CBB0357F21E2480300289131 /* Tabs */,
 				CB997C522198357C0059E119 /* Pack */,
 				CBB9F9FB2179EBB70009AC69 /* HomeVC.swift */,
@@ -373,6 +386,7 @@
 				CBB9F9D92179EA840009AC69 /* Info.plist */,
 				CBA6EEEE21946C8A00FF963E /* GoogleService-Info.plist */,
 				CBA6EEED21946B3700FF963E /* SmartHome-ios.entitlements */,
+				CB7AFE1721FDCE8700F083D4 /* Pods-SmartHome-ios-acknowledgements.plist */,
 				CBB9F9D12179EA830009AC69 /* SmartHome_ios.xcdatamodeld */,
 			);
 			path = "SmartHome-ios";
@@ -532,6 +546,7 @@
 				CBB9F9D52179EA840009AC69 /* Assets.xcassets in Resources */,
 				CB9740E721E4DB2A00BE1857 /* Font Awesome 5 Pro-Solid-900.otf in Resources */,
 				CBA6EEEF21946C8A00FF963E /* GoogleService-Info.plist in Resources */,
+				CB7AFE1821FDCE8700F083D4 /* Pods-SmartHome-ios-acknowledgements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +579,7 @@
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/VTAcknowledgementsViewController/VTAcknowledgementsViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -574,6 +590,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VTAcknowledgementsViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -673,6 +690,7 @@
 				CB1BBD1021E2B0620018FAA0 /* UserDefaults.swift in Sources */,
 				CB9740E221E4D49300BE1857 /* DeviceCell.swift in Sources */,
 				CB997C5721986FC20059E119 /* Box.swift in Sources */,
+				CB7AFE1221FDBFF000F083D4 /* AboutVC.swift in Sources */,
 				CB997C4E2198109C0059E119 /* Regex.swift in Sources */,
 				CB3E5EC921E3E23700F4DCD2 /* RoomVC.swift in Sources */,
 				CB997C5121982E710059E119 /* Strings.swift in Sources */,

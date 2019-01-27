@@ -23,20 +23,13 @@ class HomeVC: UIViewController {
     private func initApp() {
         DispatchQueue.main.async {
             //TODO: Check if already logged in
-
-            if let currentUser = Auth.auth().currentUser {
-
-                print(currentUser.email)
-                print(currentUser.uid)
-
+            if let _ = Auth.auth().currentUser {
                 let mainVC = MainVC()
                 self.present(mainVC, animated: false)
             } else {
                 let loginVC = LoginVC()
                 self.present(loginVC, animated: false)
             }
-
-
         }
     }
 }
