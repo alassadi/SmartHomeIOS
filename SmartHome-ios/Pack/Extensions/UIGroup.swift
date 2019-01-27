@@ -16,6 +16,54 @@ extension UIColor {
     static let yellowish: UIColor = UIColor(red: 254/255, green: 226/255, blue: 56/255, alpha: 1.0)
 }
 
+extension UIButton {
+    public func setAsLoading(_ set: Bool, with indicatorColor: UIColor? = nil) {
+        var isAlreadyLoading = false
+        var indicatorView: UIActivityIndicatorView?
+
+        for view in self.subviews {
+            if view.restorationIdentifier == "indicator" {
+                isAlreadyLoading = true
+                indicatorView = view as? UIActivityIndicatorView
+            }
+        }
+
+        if set {
+            if !isAlreadyLoading {
+                let indicator: UIActivityIndicatorView = {
+                    let view = UIActivityIndicatorView()
+                    view.translatesAutoresizingMaskIntoConstraints = false
+                    view.color = indicatorColor
+                    view.startAnimating()
+                    view.isHidden = false
+                    view.restorationIdentifier = "indicator"
+                    view.alpha = 1.0
+                    return view
+                }()
+                self.addSubview(indicator)
+                self.bringSubviewToFront(indicator)
+                NSLayoutConstraint.activate([
+                    indicator.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+                    indicator.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+                    indicator.topAnchor.constraint(equalTo: self.topAnchor),
+                    indicator.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+                    ])
+                self.isEnabled = false
+                self.setTitleColor(self.titleColor(for: .normal)?.withAlphaComponent(0.0), for: .normal)
+            } else {
+                //It is already loading.
+                //Check the color and thats all.
+                indicatorView?.color = indicatorColor
+            }
+        } else {
+            indicatorView?.alpha = 0.0
+            indicatorView?.removeFromSuperview()
+            self.setTitleColor(self.titleColor(for: .normal)?.withAlphaComponent(1.0), for: .normal)
+            self.isEnabled = true
+        }
+    }
+}
+
 extension UIViewController {
     func setHideKeyboardOnTap() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:#selector(UIViewController.dismissKeyboard))

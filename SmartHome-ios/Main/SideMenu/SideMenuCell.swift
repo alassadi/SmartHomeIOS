@@ -52,6 +52,8 @@ class SideMenuCell: UITableViewCell {
             iconLabel.text = "home"
         case "Log out":
             iconLabel.text = "sign-out"
+        case "About":
+            iconLabel.text = "info-circle"
         default:
             print("ERROR")
         }

@@ -49,7 +49,8 @@ class LoginVC: UIViewController {
         }
     }
 
-    @objc private func onLoginPressed() {
+    @objc private func onLoginPressed(sender: UIButton) {
+        sender.setAsLoading(true, with: .white)
         guard let email = self.stackEmailPassword.textFieldEmail.text  else {
             self.presentAlert(title: "Error", message: "Invalid email.") // Localize
             return
@@ -89,6 +90,7 @@ class LoginVC: UIViewController {
             }
         } else {
             self.presentAlert(title: "Error", message: "Fields are empty!")
+            sender.setAsLoading(false)
         }
     }
     

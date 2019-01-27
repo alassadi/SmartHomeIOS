@@ -12,7 +12,7 @@ import FirebaseMessaging
 
 class SideMenuVC: UIViewController {
 
-    let optionList = ["Dashboard", "Rooms", "Log out"]
+    let optionList = ["Dashboard", "Rooms", "Log out", "About"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
